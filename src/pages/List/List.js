@@ -8,15 +8,55 @@ const List = () => {
   const [products, setProducts] = useState([]);
 
   const location = useLocation();
+  const onlineSize = location.search.includes('tags=1');
+  const freeShipping = location.search.includes('tags=2');
+  const sale = location.search.includes('tags=3');
+  const soldOut = location.search.includes('tags=4');
+
+  const womenFiltered = products
+    .slice(10, 22)
+    .filter(item =>
+      item.sorts.find(item =>
+        onlineSize
+          ? item === 'onlineSize'
+          : freeShipping
+          ? item === 'freeShipping'
+          : soldOut
+          ? item === 'soldOut'
+          : sale
+          ? item === 'sale'
+          : item
+      )
+    );
+
+  const menFiltered = products
+    .slice(0, 10)
+    .filter(item =>
+      item.sorts.find(item =>
+        onlineSize
+          ? item === 'onlineSize'
+          : freeShipping
+          ? item === 'freeShipping'
+          : soldOut
+          ? item === 'soldOut'
+          : sale
+          ? item === 'sale'
+          : item
+      )
+    );
 
   const womensList = location.search.split('?')[1].charAt(8);
-  const API_URL = `http://10.58.7.109:8000/products/categories${location.search}`;
+  // const API_URL = `http://10.58.7.109:8000/products/categories${location.search}`;
+  const API_URL = `/data/MockData.json`;
+  console.log(womensList);
+  const mensLength = menFiltered.length;
+  const womenLength = womenFiltered.length;
 
   const getFetch = () => {
     fetch(`${API_URL}`)
       .then(res => res.json())
       .then(data => {
-        setProducts(data.message);
+        setProducts(data);
       });
   };
 
@@ -29,8 +69,9 @@ const List = () => {
       <div className="pageContainer">
         {womensList < 5 ? <h4>남성니트</h4> : <h4>여성니트</h4>}
         <nav className="nextPage">
-          <p className="textArea">
-            총 <b>20개</b>의 상품이 있습니다.
+          <p className="textP">
+            총 <strong>{womensList < 5 ? mensLength : womenLength}개</strong>의
+            상품이 있습니다.
           </p>
           <ul>
             <li className="btnPageL">
@@ -52,10 +93,17 @@ const List = () => {
         </nav>
         <Select />
         <ul className="product">
-          {products &&
-            products.map((product, idx) => (
-              <ItemList key={idx} {...product} idx={idx} />
+          {womensList < 5 &&
+            menFiltered &&
+            menFiltered.map(product => (
+              <ItemList key={product.id} {...product} />
             ))}
+          {womensList >= 5 &&
+            womenFiltered.map(product => (
+              <ItemList key={product.id} {...product} />
+            ))}
+          {womensList === 10 &&
+            products.map(product => <ItemList key={product.id} {...product} />)}
         </ul>
       </div>
     </div>

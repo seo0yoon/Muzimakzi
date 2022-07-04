@@ -21,6 +21,7 @@
 
   .listText {
     width: 130px;
+    height: 30px;
     margin-top: 16px;
     font-size: 13px;
     word-wrap: break-word;
@@ -31,16 +32,18 @@
     font-size: 12px;
   }
 
-  .tagTop {
+  .tag {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
+    width: 130px;
+    margin-top: 15px;
     padding: 5px 3px 2px;
     letter-spacing: -0.5px;
 
     .sale {
       width: 30px;
-      margin: 0 4px 1px 0;
+      margin: 0 4px 4px 0;
       background: $muziRed;
       color: #fff;
       font-size: 11px;
@@ -49,24 +52,16 @@
 
     .onlineSize {
       width: 86px;
-      margin-bottom: 1px;
+      margin: 0 0 4px 0;
       background: #fff;
       color: $muziRed;
       font-size: 11px;
       @include borderBox($muziRed);
     }
-  }
-
-  .tagBottom {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    padding: 5px 3px 2px;
-    letter-spacing: -0.5px;
 
     .freeShipping {
       width: 46px;
-      margin-right: 4px;
+      margin: 0 0 4px 0;
       background: #fff;
       color: $muziRed;
       font-size: 11px;
@@ -75,6 +70,7 @@
 
     .soldOut {
       width: 27px;
+      margin: 0 0 4px 4px;
       background: #fff;
       color: $muziRed;
       background: #fff;
@@ -83,3 +79,30 @@
     }
   }
 }
+
+//   .tag {
+//     display: flex;
+//     flex-wrap: wrap;
+//     align-items: flex-end;
+//     padding: 5px 3px 2px;
+//     letter-spacing: -0.5px;
+
+//     .freeShipping {
+//       width: 46px;
+//       margin-right: 4px;
+//       background: #fff;
+//       color: $muziRed;
+//       font-size: 11px;
+//       @include borderBox($muziRed);
+//     }
+
+//     .soldOut {
+//       width: 27px;
+//       background: #fff;
+//       color: $muziRed;
+//       background: #fff;
+//       font-size: 11px;
+//       @include borderBox($muziRed);
+//     }
+//   }
+// }

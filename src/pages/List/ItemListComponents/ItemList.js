@@ -2,12 +2,13 @@ import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import './ItemList.scss';
 
-function ItemList({ name, price, thumbnail_image_url, idx }) {
+function ItemList({ name, price, thumbnail_image_url, id, sorts }) {
   const navigate = useNavigate();
-  const { id } = useParams();
+
   const goToDetail = () => {
-    navigate(`/detail/${idx + 1}`);
+    navigate(`/detail/${id}`);
   };
+
   return (
     <li className="itemList" onClick={goToDetail}>
       <img className="listImg" src={thumbnail_image_url} alt="남자니트" />
@@ -25,15 +26,17 @@ function ItemList({ name, price, thumbnail_image_url, idx }) {
       </div>
       <div className="listText">{name}</div>
       <div className="listPrice">
-        <b>{Math.floor(price)}</b>원
+        <b>{Math.floor(price).toLocaleString()}</b>원
       </div>
-      <div className="tagTop">
-        <span className="sale">SALE</span>
-        <span className="onlineSize">온라인한정사이즈</span>
-      </div>
-      <div className="tagBottom">
-        <span className="freeShipping">무료배송</span>
-        <span className="soldOut">품절</span>
+      <div className="tag">
+        {sorts.includes('sale') && <span className="sale">SALE</span>}
+        {sorts.includes('onlineSize') && (
+          <span className="onlineSize">온라인한정사이즈</span>
+        )}
+        {sorts.includes('freeShipping') && (
+          <span className="freeShipping">무료배송</span>
+        )}
+        {sorts.includes('soldOut') && <span className="soldOut">품절</span>}
       </div>
     </li>
   );

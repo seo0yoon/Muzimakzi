@@ -4,43 +4,47 @@ import { Link, useNavigate } from 'react-router-dom';
 import './Aside.scss';
 
 const Aside = () => {
-  const [categoryList, setCategoryList] = useState([]);
+  // const [categoryList, setCategoryList] = useState([]);
+
   const navigate = useNavigate();
 
-  useEffect(() => {
-    fetch('http://10.58.7.109:8000/main')
-      .then(res => res.json())
-      .then(data => {
-        setCategoryList(data.side_info);
-      });
-  }, []);
+  // const getFetch = () => {
+  //   fetch(`${CATEGOTY_LIST}`)
+  //     .then(res => res.json())
+  //     .then(data => {
+  //       setCategoryList(data.side_info);
+  //     });
+  // };
+
+  // useEffect(() => {
+  //   getFetch();
+  // }, []);
 
   const productList = typeId => {
     const queryString = `products/categories?type_id=${typeId}`;
     navigate(queryString);
   };
 
-  console.log(categoryList);
-
   return (
     <div className="aside">
-      {categoryList?.map(category => {
+      {CATEGOTY_LIST.map(({ id, name, types }) => {
         return (
-          <div className="asideCategory" key={category.category_id}>
-            <Link to={`/products/categories/${category.category_id}/types`}>
-              <h2 className="categoryName">{category.category_name}</h2>
+          <div className="asideCategory" key={id}>
+            <Link to={`/products/categories/${id + 1}/types`}>
+              <h2 className="categoryName">{name}</h2>
             </Link>
+
             <ul className="categoryTypes">
-              {category.types?.map(types => {
+              {types.map(({ id, name }) => {
                 return (
                   <li
+                    key={id}
                     className="categoryType"
                     onClick={() => {
-                      productList(types.type_id);
+                      productList(id);
                     }}
-                    key={types.type_id}
                   >
-                    {types.type_name}
+                    {name}
                   </li>
                 );
               })}
@@ -60,7 +64,7 @@ const CATEGOTY_LIST = [
     name: '남성복',
     types: [
       { id: 0, name: '남성 니트' },
-      { id: 1, name: '남성컷앤소' },
+      { id: 1, name: '남성 컷앤소' },
       { id: 2, name: '남성 셔츠' },
       { id: 3, name: '남성 아웃트탑' },
       { id: 4, name: '남성 하의' },
@@ -70,16 +74,16 @@ const CATEGOTY_LIST = [
     id: 1,
     name: '여성복',
     types: [
-      { id: 0, name: '여성 니트' },
-      { id: 1, name: '여성컷앤소' },
-      { id: 2, name: '여성 셔츠 • 원피스' },
-      { id: 3, name: '여성 아웃트탑' },
-      { id: 4, name: '여성 보텀' },
+      { id: 5, name: '여성 니트' },
+      { id: 6, name: '여성 컷앤소' },
+      { id: 7, name: '여성 셔츠 • 원피스' },
+      { id: 8, name: '여성 아웃트탑' },
+      { id: 9, name: '여성 보텀' },
     ],
   },
   {
     id: 2,
     name: 'MUZI MAKZI',
-    types: [{ id: 0, name: '유니섹스 MAKZI' }],
+    types: [{ id: 10, name: '유니섹스 MAKZI' }],
   },
 ];

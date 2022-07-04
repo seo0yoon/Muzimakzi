@@ -1,18 +1,27 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
-const SelectText = ({ list, idx }) => {
-  const [isSelected, setIsSelected] = useState(false);
+const SelectText = ({
+  list,
+  id,
+  setCount,
+  isSelected,
+  setIsSelected,
+  count,
+}) => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const type = location.search.charAt(9);
   const handleSelectBtn = () => {
     setIsSelected(!isSelected);
-    navigate(`?type_id=1&tags=${idx}`);
+    navigate(`?type_id=${type}&tags=${id}`);
+    setCount(id);
   };
 
   return (
     <div>
       <li
-        className={`${isSelected ? 'btnBold' : null} selectTagBtn`}
+        className={`${count === id ? 'btnBold' : null} selectTagBtn`}
         onClick={handleSelectBtn}
       >
         {list}

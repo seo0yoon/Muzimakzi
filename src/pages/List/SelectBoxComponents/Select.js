@@ -1,14 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SelectText from '../SelectTextComponents/SelectText';
 import './Select.scss';
 
 const SelectBox = () => {
+  const [isSelected, setIsSelected] = useState(false);
+  const [count, setCount] = useState();
+
   return (
     <div className="selectBox">
       <ul className="selectText">
-        {SELECTTEXT.map((select, idx) => {
+        {SELECTTEXT.map(({ id, list }) => {
           return (
-            <SelectText idx={idx + 1} key={select.id} list={select.list} />
+            <SelectText
+              id={id}
+              key={id}
+              list={list}
+              isSelected={isSelected}
+              count={count}
+              setCount={setCount}
+              setIsSelected={setIsSelected}
+            />
           );
         })}
       </ul>

@@ -16,14 +16,15 @@
       display: flex;
       justify-content: space-between;
 
-      .textArea {
+      .textP {
         font-size: 13px;
         font-weight: 300;
 
-        b {
+        strong {
           margin-bottom: 10px;
           color: $muziRed;
           font-size: 14px;
+          border: none;
         }
       }
 

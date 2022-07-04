@@ -24,12 +24,18 @@ const Mens = () => {
       <div className="mens">
         <div className="pageContainer">
           {params.id < 2 ? <h2>남성복</h2> : <h2>여성복</h2>}
-          <div className="categoryImg">
-            <img
-              className="mensMainImage"
-              src="/images/menswear/mensMainPic.jpg"
-              alt="남성"
-            />
+          <div>
+            {params.id < 2 ? (
+              <img
+                className="categoryImg"
+                src="/images/menswear/남성복.jpg"
+              ></img>
+            ) : (
+              <img
+                className="categoryImg"
+                src="/images/womenswear/여성복.jpg"
+              ></img>
+            )}
           </div>
           <div className="smallImage">
             {mensList &&
