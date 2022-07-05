@@ -8,6 +8,7 @@
   .asideCategory {
     padding: 30px 0;
     border-bottom: 1px solid #e1e1e1;
+    margin-bottom: 14px;
 
     &:first-child {
       padding-top: 0;
@@ -26,10 +27,14 @@
 
     .categoryTypes {
       margin: 0;
+      margin-bottom: 14px;
+      cursor: pointer;
 
       .categoryType {
-        margin-bottom: 14px;
         cursor: pointer;
+        margin-bottom: 14px;
+        font-weight: 700;
+        color: $muziRed;
 
         &:last-child {
           margin: 0;
@@ -40,6 +45,10 @@
             border-bottom: 1px solid $muziDarkGray;
           }
         }
+      }
+      .btnBold {
+        cursor: pointer;
+        margin-bottom: 14px;
       }
     }
   }

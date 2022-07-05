@@ -1,0 +1,23 @@
+@import '../../styles/variables.scss';
+
+.listLanding {
+  text-align: center;
+
+  img {
+    width: 200px;
+    margin-top: 30px;
+  }
+
+  .listLandingTit {
+    margin-top: 20px;
+    font-size: 45px;
+    font-weight: 700;
+    color: $muziRed;
+  }
+
+  .listLandingText {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #919191;
+  }
+}

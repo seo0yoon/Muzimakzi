@@ -10,6 +10,7 @@ import Nav from './components/nav/Nav';
 import Aside from './components/aside/Aside';
 import MainContainer from './MainContainer/MainContainer';
 import ContentsWrapper from './ContentsWrapper/ContentsWrapper';
+import ListLanding from './pages/List/ListLanding';
 
 const Router = () => {
   return (
@@ -24,7 +25,8 @@ const Router = () => {
             <Route path="products/categories" element={<List />} />
             <Route path="products/categories/:id/types" element={<Mens />} />
             <Route path="products/categories/3/types" element={<Labo />} />
-            <Route path="/" element={<Landing />} />
+            <Route path="" element={<Landing />} />
+            <Route path="/products/listlanding" element={<ListLanding />} />
           </Routes>
         </ContentsWrapper>
       </MainContainer>

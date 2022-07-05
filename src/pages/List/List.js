@@ -48,7 +48,6 @@ const List = () => {
   const womensList = location.search.split('?')[1].charAt(8);
   // const API_URL = `http://10.58.7.109:8000/products/categories${location.search}`;
   const API_URL = `/data/MockData.json`;
-  console.log(womensList);
   const mensLength = menFiltered.length;
   const womenLength = womenFiltered.length;
 

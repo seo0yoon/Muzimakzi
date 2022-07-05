@@ -5,7 +5,7 @@ import './Aside.scss';
 
 const Aside = () => {
   // const [categoryList, setCategoryList] = useState([]);
-
+  const [countIndex, setCountIndex] = useState(0);
   const navigate = useNavigate();
 
   // const getFetch = () => {
@@ -20,9 +20,17 @@ const Aside = () => {
   //   getFetch();
   // }, []);
 
+  const goToListLanding = id => {
+    (id !== 0) & (id !== 5) && navigate('/products/listlanding');
+  };
+
   const productList = typeId => {
     const queryString = `products/categories?type_id=${typeId}`;
     navigate(queryString);
+  };
+
+  const handleOnClick = (e, id) => {
+    setCountIndex(id);
   };
 
   return (
@@ -33,15 +41,16 @@ const Aside = () => {
             <Link to={`/products/categories/${id + 1}/types`}>
               <h2 className="categoryName">{name}</h2>
             </Link>
-
             <ul className="categoryTypes">
               {types.map(({ id, name }) => {
                 return (
                   <li
                     key={id}
-                    className="categoryType"
-                    onClick={() => {
+                    className={countIndex === id ? 'categoryType' : 'btnBold'}
+                    onClick={e => {
                       productList(id);
+                      handleOnClick(e, id);
+                      goToListLanding(id);
                     }}
                   >
                     {name}
