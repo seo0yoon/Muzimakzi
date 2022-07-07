@@ -1,14 +1,54 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import DetailBtn from './DetailComponent/DetailBtn';
+import DetailSize from './DetailComponent/DetailSize';
 import './Detail.scss';
 
 const Detail = () => {
-  const [detatilColor, setDetailColor] = useState([]);
+  const [clickColor, setClickColor] = useState();
+  const [clickCount, setClickCount] = useState(0);
+  const [clickColorChange, setClickColorChange] = useState(0);
+  const [detailData, setDetailDate] = useState([]);
+  const { id } = useParams();
 
-  const handleColorClick = e => {
-    console.log(e.target.value);
-    setDetailColor(e.target.value);
+  const findItem = detailData?.product?.find(item => {
+    return item.id === parseInt(id);
+  });
+
+  const handleCountDownClick = () => {
+    if (clickCount > 0) setClickCount(clickCount - 1);
   };
+
+  const handleCountUpClick = () => {
+    if (clickCount < 10) {
+      setClickCount(clickCount + 1);
+    } else {
+      alert('10개까지만 선택 가능합니다.');
+    }
+  };
+
+  const getFetch = () => {
+    fetch('/data/newDetial.json')
+      .then(res => res.json())
+      .then(data => {
+        setDetailDate(data);
+      });
+  };
+
+  useEffect(() => {
+    getFetch();
+  }, [id]);
+
+  const bigColorImg = {
+    0: `${findItem?.thumbnail_image_url}`,
+    1: `${findItem?.small_thumnail_image[0].thumbnail_url}`,
+    2: `${findItem?.small_thumnail_image[1].thumbnail_url}`,
+    3: `${findItem?.small_thumnail_image[2].thumbnail_url}`,
+    4: `${findItem?.small_thumnail_image[3].thumbnail_url}`,
+  };
+
+  const str = `${findItem?.description}`;
+  const brSplit = str.split('<br>');
 
   return (
     <div className="detail">
@@ -16,44 +56,44 @@ const Detail = () => {
         <div className="imageWrap">
           <img
             className="bigImg"
-            src="/images/listpage/남성니트1.jpg"
+            src={bigColorImg[clickColorChange]} //대괄호로 객체 접근
             alt="니트"
           />
-          <div className="smallImgWrap">
-            <img
-              className="smallImg"
-              src="/images/listpage/남성니트2.jpg"
-              alt="니트"
-            />
-            <img
-              className="smallImg"
-              src="/images/listpage/남성니트3.jpg"
-              alt="니트"
-            />
-            <img
-              className="smallImg"
-              src="/images/listpage/남성니트4.jpg"
-              alt="니트"
-            />
-          </div>
+          <ul className="smallImgWrap">
+            {DETAIL_SMALL_IMG.map(({ id, img }) => {
+              return (
+                <li
+                  className="smallImgLi"
+                  key={id}
+                  onClick={() => setClickColorChange(id)}
+                >
+                  <img className="smallImg" src={img} alt="thumbnail" />
+                </li>
+              );
+            })}
+          </ul>
         </div>
         <div className="detailBox">
           <div className="detailTextWrap">
-            <div className="detailTitle">울 혼방 더블 페이스 하이넥 스웨터</div>
+            <div className="detailTitle">{findItem?.name}</div>
             <div className="detailPrice">
               <div className="detailPriceL">판매가</div>
               <div className="detailPriceR">
-                19,900
+                {Math.floor(findItem?.price).toLocaleString()}
                 <span>원</span>
               </div>
             </div>
             <div className="detailtext">
-              산뜻한 촉감을 만들기 위해 강하게 꼬인 면사를 사용했습니다.
-              <br />
-              오가닉 코튼을 사용했습니다.
+              {brSplit?.map((brLine, index) => {
+                return (
+                  <div key={index}>
+                    {brLine}
+                    <br />
+                  </div>
+                );
+              })}
             </div>
           </div>
-
           <div className="detailColor">
             <div className="colorSelect">
               <div className="colorSelectL">COLOR 선택</div>
@@ -64,87 +104,35 @@ const Detail = () => {
               />
             </div>
             <div className="colorWrap">
-              <div className="colorB">
-                <input
-                  type="radio"
-                  value="1"
-                  checked={detatilColor === '1'}
-                  onChange={handleColorClick}
-                />
-                <label>Black</label>
-              </div>
-              <div className="colorW">
-                <input
-                  type="radio"
-                  value="2"
-                  checked={detatilColor === '2'}
-                  onChange={handleColorClick}
-                />
-                <label>White</label>
-              </div>
-              <div className="colorG">
-                <input
-                  type="radio"
-                  value="3"
-                  checked={detatilColor === '3'}
-                  onChange={handleColorClick}
-                />
-                <label>Grey</label>
-              </div>
-              <div className="colorN">
-                <input
-                  type="radio"
-                  value="4"
-                  checked={detatilColor === '4'}
-                  onChange={handleColorClick}
-                />
-                <label>Navy</label>
-              </div>
+              {DETAIL_COLOR.map(({ id, color }) => {
+                return (
+                  <div className="colorB" key={id}>
+                    <input
+                      type="radio"
+                      value={color}
+                      checked={clickColor === id}
+                      onChange={() => setClickColor(id)}
+                    />
+                    <label>{color}</label>
+                  </div>
+                );
+              })}
             </div>
           </div>
-
-          <div className="detailSize">
-            <div className="sizeSelect">
-              <div className="sizeSelectL">SIZE 선택</div>
-              <img
-                className="sizeSelectR"
-                src="http://image.mujikorea.net/store/common/btn/btn_size_info_off.gif"
-                alt="사이즈"
-              />
-            </div>
-            <div className="detatilSizeImg">
-              <img
-                src="http://image.mujikorea.net/goodsProp/chip/chip_SIZE_S.gif"
-                alt="s"
-              />
-              <img
-                src="http://image.mujikorea.net/goodsProp/chip/chip_SIZE_M.gif"
-                alt="m"
-              />
-              <img
-                src="http://image.mujikorea.net/goodsProp/chip/chip_SIZE_L.gif"
-                alt="l"
-              />
-              <img
-                src="http://image.mujikorea.net/goodsProp/chip/chip_SIZE_XL.gif"
-                alt="xl"
-              />
-            </div>
-          </div>
-
+          <DetailSize />
           <div className="detailAmount">
             <div className="amountSelect">수량선택</div>
             <div className="amountBtn">
-              <button className="amountDown">-</button>
-              <span>0</span>
-              <button className="amountUp">+</button>
+              <button onClick={handleCountDownClick} className="amountDown">
+                -
+              </button>
+              <span>{clickCount}</span>
+              <button onClick={handleCountUpClick} className="amountUp">
+                +
+              </button>
             </div>
           </div>
-          <div className="detailPut">
-            <button className="wishBtn">WISH</button>
-            <button className="basketBtn">장바구니</button>
-            <button className="buyBtn">바로구매</button>
-          </div>
+          <DetailBtn />
         </div>
       </div>
     </div>
@@ -155,42 +143,38 @@ export default Detail;
 
 const DETAIL_COLOR = [
   {
-    id: 0,
-    color: 'black',
-  },
-  {
     id: 1,
-    color: 'white',
+    color: 'Purple',
   },
   {
     id: 2,
-    color: 'grey',
+    color: 'Blue',
   },
   {
     id: 3,
-    color: 'navy',
-  },
-];
-
-const DETAIL_SIZE = [
-  {
-    id: 0,
-    thumbnail: 'http://image.mujikorea.net/goodsProp/chip/chip_SIZE_XS.gif',
-  },
-  {
-    id: 1,
-    thumbnail: 'http://image.mujikorea.net/goodsProp/chip/chip_SIZE_S.gif',
-  },
-  {
-    id: 2,
-    thumbnail: 'http://image.mujikorea.net/goodsProp/chip/chip_SIZE_M.gif',
-  },
-  {
-    id: 3,
-    thumbnail: 'http://image.mujikorea.net/goodsProp/chip/chip_SIZE_L.gif',
+    color: 'Orange',
   },
   {
     id: 4,
-    thumbnail: 'http://image.mujikorea.net/goodsProp/chip/chip_SIZE_XL.gif',
+    color: 'Green',
+  },
+];
+
+const DETAIL_SMALL_IMG = [
+  {
+    id: 1,
+    img: '/images/menswear/작은니트2.jpg',
+  },
+  {
+    id: 2,
+    img: '/images/menswear/작은니트3.jpg',
+  },
+  {
+    id: 3,
+    img: '/images/menswear/작은니트4.jpg',
+  },
+  {
+    id: 4,
+    img: '/images/menswear/작은니트5.jpg',
   },
 ];

@@ -20,17 +20,21 @@ body {
       }
 
       .smallImgWrap {
+        display: flex;
         padding: 45px 0;
 
-        .smallImg {
-          margin-right: 14px;
-          width: 60px;
-          height: 60px;
-          border: 1px solid #ccc;
+        .smallImgLi {
+          .smallImg {
+            margin-right: 14px;
+            width: 60px;
+            height: 60px;
+            border: 1px solid #ccc;
+            cursor: pointer;
 
-          &:hover {
-            border: 1px solid #7f0019;
-            transition: all 0.7s ease 0s;
+            &:hover {
+              border: 1px solid #7f0019;
+              transition: all 0.7s ease 0s;
+            }
           }
         }
       }
@@ -141,22 +145,8 @@ body {
           cursor: pointer;
         }
       }
-
-      .detatilSizeImg {
-        border-bottom: 1px solid #e1e1e1;
-        padding-bottom: 20px;
-        img {
-          border: 2.5px solid #dedede;
-          margin: 15px 10px 0 0;
-          cursor: pointer;
-
-          &:hover {
-            border: 2.5px solid #7f0019;
-            transition: all 0.7s ease 0s;
-          }
-        }
-      }
     }
+
     .detailAmount {
       display: flex;
       justify-content: space-between;
@@ -178,7 +168,9 @@ body {
         }
 
         span {
-          padding: 0px 15px;
+          display: inline-block;
+          text-align: center;
+          width: 44px;
         }
 
         .amountUp {
@@ -189,51 +181,6 @@ body {
           font-size: 20px;
           color: #666666;
           cursor: pointer;
-        }
-      }
-    }
-
-    .detailPut {
-      display: flex;
-      justify-content: space-around;
-      padding: 10px 16px;
-
-      .wishBtn {
-        border: 1px solid rgba(153, 153, 153, 0.7);
-        background-color: #fff;
-        padding: 11px 26px;
-        font-size: 12px;
-
-        &:hover {
-          transition: all 0.5s ease 0s;
-          background-color: #eee;
-          opacity: 0.8;
-        }
-      }
-
-      .basketBtn {
-        padding: 11px 22px;
-        border: 1px solid rgba(153, 153, 153, 0.7);
-        background-color: #333;
-        color: #fff;
-        font-size: 12px;
-
-        &:hover {
-          transition: all 0.5s ease 0s;
-          opacity: 0.7;
-        }
-      }
-
-      .buyBtn {
-        padding: 11px 22px;
-        border: 1px solid rgba(153, 153, 153, 0.7);
-        background-color: #7f0019;
-        color: #fff;
-        font-size: 12px;
-
-        &:hover {
-          transition: all 0.5s ease 0s;
-          opacity: 0.7;
         }
       }
     }

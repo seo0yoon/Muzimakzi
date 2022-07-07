@@ -1,0 +1,37 @@
+.detailSize {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px 18px;
+
+  .sizeSelect {
+    display: flex;
+    justify-content: space-between;
+
+    .sizeSelectL {
+      font-size: 13px;
+    }
+
+    .sizeSelectR {
+      height: 16px;
+      margin-top: 2px;
+      cursor: pointer;
+    }
+  }
+
+  .detatilSizeImg {
+    display: flex;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e1e1e1;
+
+    .detatilSizeListImg {
+      margin: 15px 10px 0 0;
+      border: 2.5px solid #dedede;
+      cursor: pointer;
+    }
+
+    .detailSizeClicked {
+      margin: 15px 10px 0 0;
+      border: 2.5px solid #7f0019;
+    }
+  }
+}
