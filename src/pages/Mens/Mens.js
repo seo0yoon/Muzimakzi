@@ -37,12 +37,12 @@ const Mens = () => {
               ></img>
             )}
           </div>
-          <div className="smallImage">
+          {/* <div className="smallImage">
             {mensList &&
               mensList.map(men => {
                 return <MensList key={men.type_id} men={men} />;
               })}
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

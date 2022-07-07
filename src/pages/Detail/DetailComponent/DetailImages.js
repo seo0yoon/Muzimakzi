@@ -1,12 +1,11 @@
 import React from 'react';
 import '../DetailComponent/DetailImages.scss';
-const DetailImage = ({ thumbnail_url }) => {
+
+const DetailImage = ({ thumbnail_image_url }) => {
   return (
     <div>
-      <div className="imageZone">
-        <div className="detailImage">
-          <img className="mainImage" src={thumbnail_url} alt="" />
-        </div>
+      <div className="detailImage">
+        <img className="mainImage" src={thumbnail_image_url} alt="썸네일" />
       </div>
     </div>
   );

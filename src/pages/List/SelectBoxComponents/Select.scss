@@ -3,7 +3,6 @@
 .selectBox {
   display: flex;
   padding: 6px 0 5px;
-  margin-top: 26px;
   border: 1px solid rgb(214, 214, 214);
   background-color: #ebebeb;
 
@@ -41,14 +40,15 @@
       background-image: url('../../../../public/images/listpage/btn_typeList_off.gif');
       background-repeat: no-repeat;
     }
-
-    .more {
+  }
+  .amountSelectWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    select {
       width: 56px;
       height: 20px;
       border: 1px solid $muziLightGray;
-      background: #fff
-        url('../../../../public/images/listpage/bg_select_li.gif') 100% 0
-        no-repeat;
       font-size: 12px;
     }
   }

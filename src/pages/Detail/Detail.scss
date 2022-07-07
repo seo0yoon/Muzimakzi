@@ -1,91 +1,241 @@
-.detailContainer {
-  display: flex;
-  .imageContainer {
-    #smallImageList {
-      display: flex;
-    }
+body {
+  box-sizing: border-box;
+
+  input {
+    margin-right: 10px;
+    width: 20px;
+    cursor: pointer;
   }
-  .detailInform {
+}
+
+.detail {
+  .detailWrap {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-top: 50px;
-    margin-left: 30px;
-    .title {
-      font-size: 20px;
-    }
-    .textContainer {
-      display: flex;
-      justify-content: space-between;
-      width: 80%;
-      #titleName {
-        margin-top: 5px;
+
+    .imageWrap {
+      .bigImg {
+        margin-top: 50px;
+        width: 340px;
+        height: 350px;
+      }
+
+      .smallImgWrap {
+        padding: 45px 0;
+
+        .smallImg {
+          margin-right: 14px;
+          width: 60px;
+          height: 60px;
+          border: 1px solid #ccc;
+
+          &:hover {
+            border: 1px solid #7f0019;
+            transition: all 0.7s ease 0s;
+          }
+        }
       }
     }
   }
-  #mainImage {
-    width: 400px;
-    height: 400px;
-  }
-  .sizeBtn {
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    .rightBtn {
-      font-size: 12px;
-      color: #333;
+
+  .detailBox {
+    padding: 20px;
+
+    .detailTextWrap {
+      padding: 16px;
+
+      .detailTitle {
+        font-size: 19px;
+        font-weight: bold;
+        padding: 13px 0 16px;
+        color: #000;
+      }
+
+      .detailPrice {
+        display: flex;
+        font-size: 12px;
+
+        .detailPriceL {
+          float: left;
+          padding: 2px 0 0;
+          margin-right: 10px;
+          font-weight: bold;
+          border: 0;
+        }
+
+        .detailPriceR {
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 100%;
+          color: #7f0019;
+
+          span {
+            font-size: 12px;
+            font-weight: normal;
+          }
+        }
+      }
+
+      .detailtext {
+        color: #333;
+        font-size: 12px;
+        line-height: 16px;
+        border-top: 1px dotted #e1e1e1;
+        border-bottom: 1px solid #e1e1e1;
+        padding: 15px 0;
+        margin-top: 11px;
+      }
     }
-  }
-  .colorInfo {
-    display: flex;
-    flex-direction: column;
-    margin: 10px 0;
-  }
-  .price {
-    font-size: 20px;
-  }
-  .textArea {
-    color: #333;
-    width: 80%;
-    font-size: 13px;
-    line-height: 16px;
-    border-top: 1px dotted #e1e1e1;
-    border-bottom: 1px solid #e1e1e1;
-    padding: 15px 0;
-    margin-top: 11px;
-  }
-  .sizeInfo {
-    display: flex;
-    height: 50px;
-  }
-  .button {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    overflow: hidden;
-    background: transparent;
-    width: 80%;
-  }
-  .btnContainer {
-    display: flex;
-    justify-content: space-between;
-    height: 40px;
-    width: 70%;
-  }
-  #wishBtn {
-    border: 1px solid rgba(153, 153, 153, 0.7);
-    width: 80px;
-  }
-  #cartBtn {
-    border: 1px solid transparent;
-    width: 80px;
-    background-color: #333;
-    color: #fff;
-  }
-  #payBtn {
-    border: 0;
-    width: 80px;
-    background-color: #7f0019;
-    color: #fff;
+
+    .detailColor {
+      display: flex;
+      flex-direction: column;
+      padding: 0 20px 16px;
+
+      .colorSelect {
+        display: flex;
+        justify-content: space-between;
+
+        .colorSelectL {
+          font-size: 13px;
+        }
+
+        .colorSelectR {
+          height: 16px;
+          margin-top: 2px;
+          cursor: pointer;
+        }
+      }
+      .colorWrap {
+        margin-top: 20px;
+
+        .colorB {
+          margin-bottom: 6px;
+        }
+
+        .colorW {
+          margin-bottom: 6px;
+        }
+
+        .colorG {
+          margin-bottom: 6px;
+        }
+      }
+    }
+
+    .detailSize {
+      display: flex;
+      flex-direction: column;
+      padding: 0 20px 18px;
+
+      .sizeSelect {
+        display: flex;
+        justify-content: space-between;
+
+        .sizeSelectL {
+          font-size: 13px;
+        }
+
+        .sizeSelectR {
+          height: 16px;
+          margin-top: 2px;
+          cursor: pointer;
+        }
+      }
+
+      .detatilSizeImg {
+        border-bottom: 1px solid #e1e1e1;
+        padding-bottom: 20px;
+        img {
+          border: 2.5px solid #dedede;
+          margin: 15px 10px 0 0;
+          cursor: pointer;
+
+          &:hover {
+            border: 2.5px solid #7f0019;
+            transition: all 0.7s ease 0s;
+          }
+        }
+      }
+    }
+    .detailAmount {
+      display: flex;
+      justify-content: space-between;
+      padding: 16px;
+
+      .amountSelect {
+        padding: 5px 0 5px;
+      }
+
+      .amountBtn {
+        .amountDown {
+          width: 32px;
+          border-radius: 50%;
+          border: 1px solid #dedede;
+          background-color: transparent;
+          font-size: 20px;
+          color: #666666;
+          cursor: pointer;
+        }
+
+        span {
+          padding: 0px 15px;
+        }
+
+        .amountUp {
+          width: 32px;
+          border-radius: 50%;
+          border: 1px solid #dedede;
+          background-color: transparent;
+          font-size: 20px;
+          color: #666666;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .detailPut {
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 16px;
+
+      .wishBtn {
+        border: 1px solid rgba(153, 153, 153, 0.7);
+        background-color: #fff;
+        padding: 11px 26px;
+        font-size: 12px;
+
+        &:hover {
+          transition: all 0.5s ease 0s;
+          background-color: #eee;
+          opacity: 0.8;
+        }
+      }
+
+      .basketBtn {
+        padding: 11px 22px;
+        border: 1px solid rgba(153, 153, 153, 0.7);
+        background-color: #333;
+        color: #fff;
+        font-size: 12px;
+
+        &:hover {
+          transition: all 0.5s ease 0s;
+          opacity: 0.7;
+        }
+      }
+
+      .buyBtn {
+        padding: 11px 22px;
+        border: 1px solid rgba(153, 153, 153, 0.7);
+        background-color: #7f0019;
+        color: #fff;
+        font-size: 12px;
+
+        &:hover {
+          transition: all 0.5s ease 0s;
+          opacity: 0.7;
+        }
+      }
+    }
   }
 }

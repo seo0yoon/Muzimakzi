@@ -11,24 +11,28 @@
   .listImg {
     width: 130px;
     height: 130px;
+    cursor: pointer;
   }
 
   .listIcons {
     .itemListImg {
       margin-right: 5px;
+      cursor: pointer;
     }
   }
 
   .listText {
     width: 130px;
-    height: 30px;
+    height: 50px;
     margin-top: 16px;
     font-size: 13px;
     word-wrap: break-word;
+    cursor: pointer;
   }
 
   .listPrice {
-    padding: 30px 0 0 79px;
+    display: flex;
+    justify-content: end;
     font-size: 12px;
   }
 
@@ -37,13 +41,12 @@
     flex-wrap: wrap;
     align-items: flex-end;
     width: 130px;
-    margin-top: 15px;
-    padding: 5px 3px 2px;
+    padding: 16px 0 16px 0;
     letter-spacing: -0.5px;
 
     .sale {
       width: 30px;
-      margin: 0 4px 4px 0;
+      margin: 4px 4px 0 0;
       background: $muziRed;
       color: #fff;
       font-size: 11px;
@@ -52,7 +55,7 @@
 
     .onlineSize {
       width: 86px;
-      margin: 0 0 4px 0;
+      margin: 4px 4px 0 0;
       background: #fff;
       color: $muziRed;
       font-size: 11px;
@@ -61,7 +64,7 @@
 
     .freeShipping {
       width: 46px;
-      margin: 0 0 4px 0;
+      margin: 4px 4px 0 0;
       background: #fff;
       color: $muziRed;
       font-size: 11px;
@@ -70,7 +73,7 @@
 
     .soldOut {
       width: 27px;
-      margin: 0 0 4px 4px;
+      margin: 4px 4px 0 0;
       background: #fff;
       color: $muziRed;
       background: #fff;
@@ -79,30 +82,3 @@
     }
   }
 }
-
-//   .tag {
-//     display: flex;
-//     flex-wrap: wrap;
-//     align-items: flex-end;
-//     padding: 5px 3px 2px;
-//     letter-spacing: -0.5px;
-
-//     .freeShipping {
-//       width: 46px;
-//       margin-right: 4px;
-//       background: #fff;
-//       color: $muziRed;
-//       font-size: 11px;
-//       @include borderBox($muziRed);
-//     }
-
-//     .soldOut {
-//       width: 27px;
-//       background: #fff;
-//       color: $muziRed;
-//       background: #fff;
-//       font-size: 11px;
-//       @include borderBox($muziRed);
-//     }
-//   }
-// }

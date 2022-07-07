@@ -1,7 +1,7 @@
 import React from 'react';
 import '../DetailComponent/TextInfo.scss';
 
-const TextInfo = ({ id, name, price, size, color, description, thumbnail }) => {
+const TextInfo = ({ name, price, description }) => {
   return (
     <ul className="textArea">
       <li className="detailTitle">

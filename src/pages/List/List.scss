@@ -5,8 +5,7 @@
 
   .pageContainer {
     h4 {
-      margin: 5px 0 25px;
-      padding-bottom: 18px;
+      padding: 5px 0 25px 0;
       border-bottom: 1px solid #e6e6e6;
       font-size: 14px;
       font-weight: bold;
@@ -15,13 +14,13 @@
     .nextPage {
       display: flex;
       justify-content: space-between;
+      padding: 25px 0;
 
       .textP {
         font-size: 13px;
         font-weight: 300;
 
         strong {
-          margin-bottom: 10px;
           color: $muziRed;
           font-size: 14px;
           border: none;
@@ -31,6 +30,7 @@
       ul {
         display: flex;
         justify-content: flex-end;
+        align-items: center;
         .btnPageL {
           margin-right: 5px;
         }

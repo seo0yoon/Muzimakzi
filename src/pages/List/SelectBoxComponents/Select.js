@@ -26,8 +26,15 @@ const SelectBox = () => {
       <ul className="selectBtnGroup">
         <li className="imageBtn" />
         <li className="imageListBtn" />
-        <li className="more">60</li>
       </ul>
+      <div className="amountSelectWrap">
+        <select name="Select">
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="30">30</option>
+          <option value="40">40</option>
+        </select>
+      </div>
     </div>
   );
 };
