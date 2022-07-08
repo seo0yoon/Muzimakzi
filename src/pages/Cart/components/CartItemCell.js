@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import './CartItemCell.scss';
 const CartItemCell = ({
-  cartItem: { name, size, color, price, thumbnail, quantity, cart_id },
+  cartItem: { name, size, color, price, thumbnail, count, id },
   getCartData,
 }) => {
-  const [itemCount, setItemCount] = useState(quantity);
+  const [itemCount, setItemCount] = useState(count);
 
-  const sum = price * quantity;
+  const sum = price * count;
 
   const handleCount = e => {
     const { value } = e.target;
@@ -18,16 +18,17 @@ const CartItemCell = ({
     alert('변경되었습니다.');
   };
 
-  const deleteItem = () => {
-    fetch(`http://10.58.7.109:8000/carts?cart_id=${cart_id}`, {
-      method: 'DELETE',
-      headers: {
-        Authorization: localStorage.getItem('TOKEN'),
-      },
-    })
-      .then(res => alert('삭제 되었습니다.'))
-      .then(setTimeout(() => getCartData(), 300));
-  };
+  //백엔드 API
+  // const deleteItem = () => {
+  //   fetch(`http://10.58.7.109:8000/carts?cart_id=${cart_id}`, {
+  //     method: 'DELETE',
+  //     headers: {
+  //       Authorization: localStorage.getItem('TOKEN'),
+  //     },
+  //   })
+  //     .then(res => alert('삭제 되었습니다.'))
+  //     .then(setTimeout(() => getCartData(), 300));
+  // };
 
   return (
     <tr className="CartItemCell">
@@ -42,7 +43,7 @@ const CartItemCell = ({
         </ul>
       </td>
       <td className="prdPrice">
-        <p>[판매가] {parseInt(price)}</p>
+        <p>[판매가] {parseInt(price).toLocaleString()}</p>
       </td>
       <td className="prdQty">
         <ul>
@@ -50,6 +51,7 @@ const CartItemCell = ({
             <input
               type="number"
               min="1"
+              max="10"
               onChange={handleCount}
               value={itemCount}
             />
@@ -60,18 +62,19 @@ const CartItemCell = ({
         </ul>
       </td>
       <td className="prdSum">
-        <p>{sum} 원</p>
+        <p>{parseInt(sum).toLocaleString()} 원</p>
       </td>
       <td className="prdOrder">
         <ul>
           <li>
-            <button>바로주문</button>
+            <button className="orderBtn">바로주문</button>
           </li>
           <li>
             <button
-              onClick={() => {
-                deleteItem();
-              }}
+              className="orderBtn"
+              // onClick={() => {
+              //   deleteItem();
+              // }}
             >
               삭제
             </button>

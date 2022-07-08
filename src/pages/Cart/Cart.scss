@@ -1,6 +1,7 @@
 @import '../../styles/variables.scss';
 
 .cart {
+  height: 1000px;
   .pageContainer {
     .orderStep {
       img {
@@ -160,17 +161,22 @@
 
       .deleteBtn {
         background-color: white;
-        margin-left: 8px;
-        padding: 0px 4px;
-        border: 1px solid gray;
+        margin: 0 0 3px 8px;
+        padding: 0px 6px;
+        border: 1px solid $muziGray;
+        font-size: 13px;
+        border-radius: 2px;
+        box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1);
       }
 
       .goToShopping {
-        background-color: $muziLightGray;
-        border: 1px solid gray;
+        background-color: $muziGray;
+        border: 1px solid $muziGray;
+        border-radius: 2px;
         width: 115px;
         height: 46px;
         color: white;
+        box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2);
       }
     }
   }

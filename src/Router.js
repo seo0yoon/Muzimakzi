@@ -20,7 +20,7 @@ const Router = () => {
         <Aside />
         <ContentsWrapper>
           <Routes>
-            <Route path="" element={<Mens />} />
+            <Route path="" element={<Labo />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/detail/:id" element={<Detail />} />
             <Route path="products/categories" element={<List />} />

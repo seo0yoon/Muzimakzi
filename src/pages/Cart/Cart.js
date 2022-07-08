@@ -32,6 +32,12 @@ const Cart = () => {
     setCartItems(carts);
   }, []);
 
+  const handleShoppingClick = () => {
+    alert(
+      '주문하시려는 상품 정보가 제대로 전달되지 않았습니다. 다시 시도해주세요.'
+    );
+  };
+
   return (
     <div className="cart">
       <div className="pageContainer">
@@ -70,12 +76,12 @@ const Cart = () => {
           </thead>
           <tbody className="cartListBody">
             {cartItems ? (
-              cartItems.map((cartItem, idx) => {
-                priceSum += cartItem.price * cartItem.quantity;
-                shippingFee = priceSum > 30000 && 0;
+              cartItems.map((cartItem, id) => {
+                priceSum += cartItem.price * cartItem.count;
+                shippingFee = priceSum > 30000 && 3000;
                 return (
                   <CartItemCell
-                    key={idx}
+                    key={id}
                     cartItem={cartItem}
                     getCartData={getCartData}
                   />
@@ -91,11 +97,11 @@ const Cart = () => {
             <div className="cartSumResult">
               <div className="cartProductTotal">
                 <span>상품금액 합계 : </span>
-                <span>{priceSum}원</span>
+                <span>{parseInt(priceSum).toLocaleString()}원</span>
               </div>
               <div className="cartShippingFeeTotal">
-                <span>배송비 합계 :</span>
-                <span>{shippingFee}원</span>
+                <span>배송비 : </span>
+                <span>{parseInt(shippingFee).toLocaleString()}원</span>
               </div>
             </div>
             <div className="devider" />
@@ -104,7 +110,7 @@ const Cart = () => {
                 <span>총 결제 예정 금액 : </span>
                 <span>
                   <span className="totalPriceText">
-                    {priceSum + shippingFee}
+                    {parseInt(priceSum + shippingFee).toLocaleString()}
                   </span>
                   원
                 </span>
@@ -116,7 +122,9 @@ const Cart = () => {
               <span>선택한 상품</span>
               <button className="deleteBtn">X 삭제하기</button>
             </div>
-            <button className="goToShopping">계속 쇼핑하기</button>
+            <button className="goToShopping" onClick={handleShoppingClick}>
+              계속 쇼핑하기
+            </button>
           </div>
         </div>
       </div>

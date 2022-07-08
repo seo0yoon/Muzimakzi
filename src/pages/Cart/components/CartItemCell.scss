@@ -26,6 +26,7 @@
   .prdPrice {
     border: none;
     border-bottom: 1px dotted gray;
+    font-size: 13px;
   }
   .prdQty {
     text-align: center;
@@ -39,8 +40,11 @@
         width: 70%;
       }
       button {
-        border: 1px solid $muziGray;
         width: 70%;
+        border: 1px solid $muziGray;
+        font-size: 12px;
+        border-radius: 2px;
+        box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1);
       }
     }
   }
@@ -56,12 +60,17 @@
     text-align: center;
     border-bottom: 1px dotted gray;
     border-right: 1px dotted gray;
-    li {
-      margin: 2px 0;
-    }
-    bottom {
-      width: 70%;
-      border: 1px solid $muziGray;
+    ul {
+      li {
+        margin: 2px 0;
+        .orderBtn {
+          width: 65%;
+          border: 1px solid $muziGray;
+          font-size: 12px;
+          border-radius: 2px;
+          box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1);
+        }
+      }
     }
   }
 }

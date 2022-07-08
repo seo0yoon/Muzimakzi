@@ -11,6 +11,7 @@ body {
   transform: translate(-50%, -50%);
   border: 3px solid #7f0019;
   background-color: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 
   .modalContainer {
     .modalHeader {
@@ -55,6 +56,14 @@ body {
         font-size: 12px;
         color: #fff;
         cursor: pointer;
+        &:hover {
+          padding: 6px 11px;
+          margin-right: 6px;
+          background-color: #7f0019;
+          font-size: 12px;
+          color: #fff;
+          cursor: pointer;
+        }
       }
       .modalBtnR {
         padding: 6px 11px;
@@ -62,6 +71,13 @@ body {
         border: 1px solid #333333;
         font-size: 12px;
         cursor: pointer;
+        &:hover {
+          padding: 6px 11px;
+          border: 1px solid #7f0019;
+          font-size: 12px;
+          color: #7f0019;
+          cursor: pointer;
+        }
       }
     }
   }
