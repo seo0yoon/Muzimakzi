@@ -85,18 +85,19 @@
   },
   {
     "id": 13,
-    "name": "포인티드 토 펌프스",
-    "price": "59900",
-    "thumbnail_image_url": "../images/womenswear/여성1(3).jpg",
-    "sorts": ["onlineSize", "sale", "freeShipping"]
+    "name": "스트레치 저지 · 캐미솔",
+    "price": "39200",
+    "thumbnail_image_url": "../images/womenswear/여성1(8).jpg",
+    "sorts": ["onlineSize"]
   },
   {
     "id": 14,
-    "name": "튼튼한 니트 원단 스커트",
-    "price": "29600",
-    "thumbnail_image_url": "../images/womenswear/여성1(4).jpg",
+    "name": "스트레치 트윌 · 턱 스커트 · 마터니티",
+    "price": "49800",
+    "thumbnail_image_url": "../images/womenswear/여성1(6).jpg",
     "sorts": ["freeShipping"]
   },
+
   {
     "id": 15,
     "name": "스트레치 데님 · 스키니 팬츠",
@@ -106,10 +107,10 @@
   },
   {
     "id": 16,
-    "name": "스트레치 트윌 · 턱 스커트 · 마터니티",
-    "price": "49800",
-    "thumbnail_image_url": "../images/womenswear/여성1(6).jpg",
-    "sorts": ["freeShipping"]
+    "name": "발수 · 발이 편한 스니커 · 여성",
+    "price": "39900",
+    "thumbnail_image_url": "../images/womenswear/여성1(1).jpg",
+    "sorts": ["onlineSize", "soldOut"]
   },
   {
     "id": 17,
@@ -120,11 +121,12 @@
   },
   {
     "id": 18,
-    "name": "스트레치 저지 · 캐미솔",
-    "price": "39200",
-    "thumbnail_image_url": "../images/womenswear/여성1(8).jpg",
-    "sorts": ["onlineSize"]
+    "name": "포인티드 토 펌프스",
+    "price": "59900",
+    "thumbnail_image_url": "../images/womenswear/여성1(3).jpg",
+    "sorts": ["onlineSize", "sale", "freeShipping"]
   },
+
   {
     "id": 19,
     "name": "메리노 울 워셔블 V넥 폴로 니트",
@@ -148,9 +150,9 @@
   },
   {
     "id": 22,
-    "name": "발수 · 발이 편한 스니커 · 여성",
-    "price": "39900",
-    "thumbnail_image_url": "../images/womenswear/여성1(1).jpg",
-    "sorts": ["onlineSize", "soldOut"]
+    "name": "튼튼한 니트 원단 스커트",
+    "price": "29600",
+    "thumbnail_image_url": "../images/womenswear/여성1(4).jpg",
+    "sorts": ["freeShipping"]
   }
 ]

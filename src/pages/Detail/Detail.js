@@ -14,6 +14,7 @@ const Detail = () => {
   const findItem = detailData?.product?.find(item => {
     return item.id === parseInt(id);
   });
+  console.log(findItem);
 
   const handleCountDownClick = () => {
     if (clickCount > 0) setClickCount(clickCount - 1);
