@@ -14,7 +14,6 @@ const Detail = () => {
   const findItem = detailData?.product?.find(item => {
     return item.id === parseInt(id);
   });
-  console.log(findItem);
 
   const handleCountDownClick = () => {
     if (clickCount > 0) setClickCount(clickCount - 1);
@@ -57,7 +56,7 @@ const Detail = () => {
         <div className="imageWrap">
           <img
             className="bigImg"
-            src={bigColorImg[clickColorChange]} //대괄호로 객체 접근
+            src={bigColorImg[clickColorChange]}
             alt="니트"
           />
           <ul className="smallImgWrap">
