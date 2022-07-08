@@ -1,22 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-
 import { cartActions } from '../../redux/store';
 import DetailBtn from './DetailComponent/DetailBtn';
 import DetailSize from './DetailComponent/DetailSize';
+import CartModal from '../Cart/CartModal';
 import './Detail.scss';
 
 const Detail = () => {
+  const [isOpenCartModal, setIsOpenCartModal] = useState(false);
   const [clickColor, setClickColor] = useState();
-  const [clickCount, setClickCount] = useState(0);
+  const [clickCount, setClickCount] = useState(1);
   const [clickColorChange, setClickColorChange] = useState(0);
   const [detailData, setDetailDate] = useState([]);
   const [sizeCount, setSizeCount] = useState();
-
   const dispatch = useDispatch();
   const { id } = useParams();
-
   const findItem = detailData?.product?.find(item => {
     return item.id === parseInt(id);
   });
@@ -39,16 +38,20 @@ const Detail = () => {
     bigColorImg[clickColorChange]
   );
 
-  const handleCountDownClick = () => {
-    if (clickCount > 0) setClickCount(clickCount - 1);
-  };
-
   const handleCountUpClick = () => {
     if (clickCount < 10) {
-      setClickCount(clickCount + 1);
+      setClickCount(prevClickCount => prevClickCount + 1);
     } else {
-      alert('10개까지만 선택 가능합니다.');
+      alert('10개까지만 구매 가능합니다.');
     }
+  };
+
+  const handleCountDownClick = () => {
+    if (clickCount < 2) {
+      alert('최소 구매 수량은 1개 입니다.');
+      return;
+    }
+    setClickCount(prevClickCount => prevClickCount - 1);
   };
 
   const getFetch = () => {
@@ -69,8 +72,15 @@ const Detail = () => {
       price: findItem?.price,
       thumbnail: bigColorImg[clickColorChange],
     };
-    console.log('button');
     dispatch(cartActions.create(data));
+  };
+
+  const openCartModal = () => {
+    setIsOpenCartModal(!isOpenCartModal);
+  };
+
+  const closeCartModal = () => {
+    setIsOpenCartModal(false);
   };
 
   useEffect(() => {
@@ -166,7 +176,16 @@ const Detail = () => {
               </button>
             </div>
           </div>
-          <DetailBtn createCartItem={createCartItem} />
+          <DetailBtn
+            createCartItem={createCartItem}
+            clickColor={clickColor}
+            sizeCount={sizeCount}
+            openCartModal={openCartModal}
+            closeCartModal={closeCartModal}
+          />
+          {isOpenCartModal && (
+            <CartModal setIsOpenCartModal={setIsOpenCartModal} />
+          )}
         </div>
       </div>
     </div>

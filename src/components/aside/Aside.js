@@ -8,6 +8,7 @@ const Aside = () => {
   const [countIndex, setCountIndex] = useState(0);
   const navigate = useNavigate();
 
+  //백엔드 API
   // const getFetch = () => {
   //   fetch(`${CATEGOTY_LIST}`)
   //     .then(res => res.json())

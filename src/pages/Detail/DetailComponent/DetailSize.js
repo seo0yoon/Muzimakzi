@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../DetailComponent/DetailSize.scss';
 
 const DetailSize = ({ sizeCount, setSizeCount }) => {

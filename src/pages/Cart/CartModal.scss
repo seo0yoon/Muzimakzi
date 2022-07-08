@@ -1,0 +1,68 @@
+body {
+  box-sizing: border-box;
+}
+
+.cartModal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 500px;
+  padding: 15px;
+  transform: translate(-50%, -50%);
+  border: 3px solid #7f0019;
+  background-color: #fff;
+
+  .modalContainer {
+    .modalHeader {
+      display: block;
+      padding-bottom: 11px;
+      border-bottom: 1px solid #e1e1e1;
+      font-weight: bold;
+      font-size: 13px;
+    }
+
+    .modalContent {
+      text-align: center;
+      background-color: white;
+
+      .contentTitle {
+        padding: 25px 0 20px;
+        text-align: center;
+        font-size: 21px;
+        font-weight: 700;
+
+        span {
+          color: #7f0019;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .contentCheck {
+      padding: 13px 16px 9px;
+      margin-bottom: 15px;
+      background-color: #f3f3f3;
+      font-size: 12px;
+      font-weight: 300;
+    }
+    .modalButtons {
+      display: flex;
+      justify-content: center;
+      .modalBtnL {
+        padding: 6px 11px;
+        margin-right: 6px;
+        background-color: #333;
+        font-size: 12px;
+        color: #fff;
+        cursor: pointer;
+      }
+      .modalBtnR {
+        padding: 6px 11px;
+        background-color: #fff;
+        border: 1px solid #333333;
+        font-size: 12px;
+        cursor: pointer;
+      }
+    }
+  }
+}

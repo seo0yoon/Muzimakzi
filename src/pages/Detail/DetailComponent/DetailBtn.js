@@ -1,10 +1,12 @@
 import React from 'react';
-
+import { useNavigate } from 'react-router-dom';
 import '../DetailComponent/DetailBtn.scss';
 
-const DetailBtn = ({ createCartItem }) => {
-  const handleAlert = () => {
-    alert('장바구니에 담기가 완료되었습니다.');
+const DetailBtn = ({ createCartItem, openCartModal }) => {
+  const navigate = useNavigate();
+
+  const goToCart = clickColor => {
+    navigate('/cart');
   };
 
   return (
@@ -14,12 +16,19 @@ const DetailBtn = ({ createCartItem }) => {
         className="basketBtn"
         onClick={() => {
           createCartItem();
-          handleAlert();
+          openCartModal();
         }}
       >
         장바구니
       </button>
-      <button className="buyBtn">바로구매</button>
+      <button
+        className="buyBtn"
+        onClick={() => {
+          goToCart();
+        }}
+      >
+        바로구매
+      </button>
     </div>
   );
 };
