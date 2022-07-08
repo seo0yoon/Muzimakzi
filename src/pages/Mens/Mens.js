@@ -39,7 +39,7 @@ const Mens = () => {
             )}
           </div>
 
-          {/* 백엔드 API를 가져와서 보여주는 Veiw
+          {/* 백엔드 API를 가져와서 보여주는 view
           <div className="smallImage">
             {mensList &&
               mensList.map(men => {
