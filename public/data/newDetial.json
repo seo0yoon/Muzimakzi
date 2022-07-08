@@ -31,19 +31,19 @@
       "small_thumnail_image": [
         {
           "id": 1,
-          "thumbnail_url": "../images/menswear/작은남자니트1 (1).jpg"
+          "thumbnail_url": "/images/menswear/작은남자니트1 (1).jpg"
         },
         {
           "id": 2,
-          "thumbnail_url": "../images/menswear/작은남자니트1 (2).jpg"
+          "thumbnail_url": "/images/menswear/작은남자니트1 (2).jpg"
         },
         {
           "id": 3,
-          "thumbnail_url": "../images/menswear/작은남자니트1 (3).jpg"
+          "thumbnail_url": "/images/menswear/작은남자니트1 (3).jpg"
         },
         {
           "id": 4,
-          "thumbnail_url": "../images/menswear/작은남자니트1 (4).jpg"
+          "thumbnail_url": "/images/menswear/작은남자니트1 (4).jpg"
         }
       ],
       "name": "울 혼방 더블 페이스 꽈배기 스웨터",
@@ -56,19 +56,19 @@
       "small_thumnail_image": [
         {
           "id": 1,
-          "thumbnail_url": "../images/menswear/작은남자니트2 (1).jpg"
+          "thumbnail_url": "/images/menswear/작은남자니트2 (1).jpg"
         },
         {
           "id": 2,
-          "thumbnail_url": "../images/menswear/작은남자니트2 (2).jpg"
+          "thumbnail_url": "/images/menswear/작은남자니트2 (2).jpg"
         },
         {
           "id": 3,
-          "thumbnail_url": "../images/menswear/작은남자니트2 (3).jpg"
+          "thumbnail_url": "/images/menswear/작은남자니트2 (3).jpg"
         },
         {
           "id": 4,
-          "thumbnail_url": "../images/menswear/작은남자니트2 (4).jpg"
+          "thumbnail_url": "/images/menswear/작은남자니트2 (4).jpg"
         }
       ],
       "name": "울 혼방 더블 페이스 하이넥 스웨터",
@@ -81,19 +81,19 @@
       "small_thumnail_image": [
         {
           "id": 1,
-          "thumbnail_url": "../images/menswear/작은남자니트3 (1).jpg"
+          "thumbnail_url": "/images/menswear/작은남자니트3 (1).jpg"
         },
         {
           "id": 2,
-          "thumbnail_url": "../images/menswear/작은남자니트3 (2).jpg"
+          "thumbnail_url": "/images/menswear/작은남자니트3 (2).jpg"
         },
         {
           "id": 3,
-          "thumbnail_url": "../images/menswear/작은남자니트3 (3).jpg"
+          "thumbnail_url": "/images/menswear/작은남자니트3 (3).jpg"
         },
         {
           "id": 4,
-          "thumbnail_url": "../images/menswear/작은남자니트3 (4).jpg"
+          "thumbnail_url": "/images/menswear/작은남자니트3 (4).jpg"
         }
       ],
       "name": "튼튼한 니트 원단 집업 가디건",
@@ -252,7 +252,7 @@
     },
     {
       "id": 11,
-      "thumbnail_image_url": "../images/womenswear/여성복1.jpg",
+      "thumbnail_image_url": "/images/womenswear/여성복1.jpg",
       "small_thumnail_image": [
         {
           "id": 1,
@@ -277,48 +277,48 @@
     },
     {
       "id": 12,
-      "thumbnail_image_url": "../images/womenswear/여성1(2).jpg",
+      "thumbnail_image_url": "/images/womenswear/여성1(2).jpg",
       "small_thumnail_image": [
         {
           "id": 1,
-          "thumbnail_url": "../images/womenswear/작은옷2 (1).png"
+          "thumbnail_url": "/images/womenswear/작은옷2 (1).png"
         },
         {
           "id": 2,
-          "thumbnail_url": "../images/womenswear/작은옷2 (2).png"
+          "thumbnail_url": "/images/womenswear/작은옷2 (2).png"
         },
         {
           "id": 3,
-          "thumbnail_url": "../images/womenswear/작은옷2 (3).png"
+          "thumbnail_url": "/images/womenswear/작은옷2 (3).png"
         },
         {
           "id": 4,
-          "thumbnail_url": "../images/womenswear/작은옷2 (4).png"
+          "thumbnail_url": "/images/womenswear/작은옷2 (4).png"
         }
       ],
-      "name": "프렌치 리넨 · 포켓 사양 스카프",
+      "name": "프렌치 리넨 · 포켓 사양 머리띠",
       "price": "29900",
       "description": "산뜻한 촉감을 만들기 위해 강하게 꼬인 면사를 사용했습니다.<br>오가닉 코튼을 사용했습니다."
     },
     {
       "id": 13,
-      "thumbnail_image_url": "../images/womenswear/여성1(8).jpg",
+      "thumbnail_image_url": "/images/womenswear/여성1(8).jpg",
       "small_thumnail_image": [
         {
           "id": 1,
-          "thumbnail_url": "../images/womenswear/작은옷1 (1).png"
+          "thumbnail_url": "/images/womenswear/작은옷1 (1).png"
         },
         {
           "id": 2,
-          "thumbnail_url": "../images/womenswear/작은옷1 (2).png"
+          "thumbnail_url": "/images/womenswear/작은옷1 (2).png"
         },
         {
           "id": 3,
-          "thumbnail_url": "../images/womenswear/작은옷1 (3).png"
+          "thumbnail_url": "/images/womenswear/작은옷1 (3).png"
         },
         {
           "id": 4,
-          "thumbnail_url": "../images/womenswear/작은옷1 (4).png"
+          "thumbnail_url": "/images/womenswear/작은옷1 (4).png"
         }
       ],
       "name": "스트레치 저지 · 캐미솔",
@@ -327,23 +327,23 @@
     },
     {
       "id": 14,
-      "thumbnail_image_url": "../images/womenswear/여성1(6).jpg",
+      "thumbnail_image_url": "/images/womenswear/여성1(6).jpg",
       "small_thumnail_image": [
         {
           "id": 1,
-          "thumbnail_url": "../images/womenswear/작은옷4 (1).png"
+          "thumbnail_url": "/images/womenswear/작은옷4 (1).png"
         },
         {
           "id": 2,
-          "thumbnail_url": "../images/womenswear/작은옷4 (2).png"
+          "thumbnail_url": "/images/womenswear/작은옷4 (2).png"
         },
         {
           "id": 3,
-          "thumbnail_url": "../images/womenswear/작은옷4 (3).png"
+          "thumbnail_url": "/images/womenswear/작은옷4 (3).png"
         },
         {
           "id": 4,
-          "thumbnail_url": "../images/womenswear/작은옷4 (4).png"
+          "thumbnail_url": "/images/womenswear/작은옷4 (4).png"
         }
       ],
       "name": "스트레치 트윌 · 턱 스커트 · 마터니티",
@@ -353,23 +353,23 @@
 
     {
       "id": 15,
-      "thumbnail_image_url": "../images/womenswear/여성1(5).jpg",
+      "thumbnail_image_url": "/images/womenswear/여성1(5).jpg",
       "small_thumnail_image": [
         {
           "id": 1,
-          "thumbnail_url": "../images/womenswear/작은옷6 (1).png"
+          "thumbnail_url": "/images/womenswear/작은옷6 (1).png"
         },
         {
           "id": 2,
-          "thumbnail_url": "../images/womenswear/작은옷6 (2).png"
+          "thumbnail_url": "/images/womenswear/작은옷6 (2).png"
         },
         {
           "id": 3,
-          "thumbnail_url": "../images/womenswear/작은옷6 (3).png"
+          "thumbnail_url": "/images/womenswear/작은옷6 (3).png"
         },
         {
           "id": 4,
-          "thumbnail_url": "../images/womenswear/작은옷6 (4).png"
+          "thumbnail_url": "/images/womenswear/작은옷6 (4).png"
         }
       ],
       "name": "스트레치 데님 · 스키니 팬츠",
@@ -378,23 +378,23 @@
     },
     {
       "id": 16,
-      "thumbnail_image_url": "../images/womenswear/여성1(1).jpg",
+      "thumbnail_image_url": "/images/womenswear/여성1(1).jpg",
       "small_thumnail_image": [
         {
           "id": 1,
-          "thumbnail_url": "../images/womenswear/작은옷5 (1).png"
+          "thumbnail_url": "/images/womenswear/작은옷5 (1).png"
         },
         {
           "id": 2,
-          "thumbnail_url": "../images/womenswear/작은옷5 (2).png"
+          "thumbnail_url": "/images/womenswear/작은옷5 (2).png"
         },
         {
           "id": 3,
-          "thumbnail_url": "../images/womenswear/작은옷5 (3).png"
+          "thumbnail_url": "/images/womenswear/작은옷5 (3).png"
         },
         {
           "id": 4,
-          "thumbnail_url": "../images/womenswear/작은옷5 (4).png"
+          "thumbnail_url": "/images/womenswear/작은옷5 (4).png"
         }
       ],
       "name": "발수 · 발이 편한 스니커 · 여성",
@@ -403,7 +403,7 @@
     },
     {
       "id": 17,
-      "thumbnail_image_url": "../images/womenswear/여성1(7).jpg",
+      "thumbnail_image_url": "/images/womenswear/여성1(7).jpg",
       "small_thumnail_image": [
         {
           "id": 1,
@@ -428,7 +428,7 @@
     },
     {
       "id": 18,
-      "thumbnail_image_url": "../images/womenswear/여성1(3).jpg",
+      "thumbnail_image_url": "/images/womenswear/여성1(3).jpg",
       "small_thumnail_image": [
         {
           "id": 1,
@@ -453,7 +453,7 @@
     },
     {
       "id": 19,
-      "thumbnail_image_url": "../images/womenswear/여성1(9).jpg",
+      "thumbnail_image_url": "/images/womenswear/여성1(9).jpg",
       "small_thumnail_image": [
         {
           "id": 1,
@@ -478,7 +478,7 @@
     },
     {
       "id": 20,
-      "thumbnail_image_url": "../images/womenswear/여성1(10).jpg",
+      "thumbnail_image_url": "/images/womenswear/여성1(10).jpg",
       "small_thumnail_image": [
         {
           "id": 1,
@@ -503,7 +503,7 @@
     },
     {
       "id": 21,
-      "thumbnail_image_url": "../images/womenswear/여성1(11).jpg",
+      "thumbnail_image_url": "/images/womenswear/여성1(11).jpg",
       "small_thumnail_image": [
         {
           "id": 1,
@@ -528,7 +528,7 @@
     },
     {
       "id": 22,
-      "thumbnail_image_url": "../images/womenswear/여성1(4).jpg",
+      "thumbnail_image_url": "/images/womenswear/여성1(4).jpg",
       "small_thumnail_image": [
         {
           "id": 1,

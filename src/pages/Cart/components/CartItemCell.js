@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './CartItemCell.scss';
 const CartItemCell = ({
-  cartItem: { name, size, color, price, thumbnail_url, quantity, cart_id },
+  cartItem: { name, size, color, price, thumbnail, quantity, cart_id },
   getCartData,
 }) => {
   const [itemCount, setItemCount] = useState(quantity);
@@ -32,7 +32,7 @@ const CartItemCell = ({
   return (
     <tr className="CartItemCell">
       <td className="prdImg">
-        <img src={`${thumbnail_url}`} alt="cartImg" />
+        <img src={thumbnail} alt="cartImg" />
       </td>
       <td className="prdInfo">
         <p className="prdName">{name}</p>

@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+
+import { cartActions } from '../../redux/store';
 import DetailBtn from './DetailComponent/DetailBtn';
 import DetailSize from './DetailComponent/DetailSize';
 import './Detail.scss';
@@ -9,11 +12,32 @@ const Detail = () => {
   const [clickCount, setClickCount] = useState(0);
   const [clickColorChange, setClickColorChange] = useState(0);
   const [detailData, setDetailDate] = useState([]);
+  const [sizeCount, setSizeCount] = useState();
+
+  const dispatch = useDispatch();
   const { id } = useParams();
 
   const findItem = detailData?.product?.find(item => {
     return item.id === parseInt(id);
   });
+
+  const bigColorImg = {
+    0: `${findItem?.thumbnail_image_url}`,
+    1: `${findItem?.small_thumnail_image[0].thumbnail_url}`,
+    2: `${findItem?.small_thumnail_image[1].thumbnail_url}`,
+    3: `${findItem?.small_thumnail_image[2].thumbnail_url}`,
+    4: `${findItem?.small_thumnail_image[3].thumbnail_url}`,
+  };
+
+  console.log(
+    id,
+    findItem?.name,
+    sizeCount,
+    clickColor,
+    clickCount,
+    findItem?.price,
+    bigColorImg[clickColorChange]
+  );
 
   const handleCountDownClick = () => {
     if (clickCount > 0) setClickCount(clickCount - 1);
@@ -35,17 +59,23 @@ const Detail = () => {
       });
   };
 
+  const createCartItem = () => {
+    const data = {
+      id,
+      poduct_name: findItem?.name,
+      size: sizeCount,
+      color: clickColor,
+      count: clickCount,
+      price: findItem?.price,
+      thumbnail: bigColorImg[clickColorChange],
+    };
+    console.log('button');
+    dispatch(cartActions.create(data));
+  };
+
   useEffect(() => {
     getFetch();
   }, [id]);
-
-  const bigColorImg = {
-    0: `${findItem?.thumbnail_image_url}`,
-    1: `${findItem?.small_thumnail_image[0].thumbnail_url}`,
-    2: `${findItem?.small_thumnail_image[1].thumbnail_url}`,
-    3: `${findItem?.small_thumnail_image[2].thumbnail_url}`,
-    4: `${findItem?.small_thumnail_image[3].thumbnail_url}`,
-  };
 
   const str = `${findItem?.description}`;
   const brSplit = str.split('<br>');
@@ -60,14 +90,18 @@ const Detail = () => {
             alt="니트"
           />
           <ul className="smallImgWrap">
-            {DETAIL_SMALL_IMG.map(({ id, img }) => {
+            {findItem?.small_thumnail_image.map(({ id, thumbnail_url }) => {
               return (
                 <li
                   className="smallImgLi"
                   key={id}
                   onClick={() => setClickColorChange(id)}
                 >
-                  <img className="smallImg" src={img} alt="thumbnail" />
+                  <img
+                    className="smallImg"
+                    src={thumbnail_url}
+                    alt="thumbnail"
+                  />
                 </li>
               );
             })}
@@ -110,8 +144,8 @@ const Detail = () => {
                     <input
                       type="radio"
                       value={color}
-                      checked={clickColor === id}
-                      onChange={() => setClickColor(id)}
+                      checked={clickColor === color}
+                      onChange={() => setClickColor(color)}
                     />
                     <label>{color}</label>
                   </div>
@@ -119,7 +153,7 @@ const Detail = () => {
               })}
             </div>
           </div>
-          <DetailSize />
+          <DetailSize sizeCount={sizeCount} setSizeCount={setSizeCount} />
           <div className="detailAmount">
             <div className="amountSelect">수량선택</div>
             <div className="amountBtn">
@@ -132,7 +166,7 @@ const Detail = () => {
               </button>
             </div>
           </div>
-          <DetailBtn />
+          <DetailBtn createCartItem={createCartItem} />
         </div>
       </div>
     </div>
@@ -157,24 +191,5 @@ const DETAIL_COLOR = [
   {
     id: 4,
     color: 'Green',
-  },
-];
-
-const DETAIL_SMALL_IMG = [
-  {
-    id: 1,
-    img: '/images/menswear/작은니트2.jpg',
-  },
-  {
-    id: 2,
-    img: '/images/menswear/작은니트3.jpg',
-  },
-  {
-    id: 3,
-    img: '/images/menswear/작은니트4.jpg',
-  },
-  {
-    id: 4,
-    img: '/images/menswear/작은니트5.jpg',
   },
 ];

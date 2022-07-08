@@ -1,23 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import MensList from './MensComponent/MensList';
+
 import './MensComponent/MensList.scss';
 import './Mens.scss';
 
 const Mens = () => {
-  const [mensList, setMensList] = useState();
+  // const [mensList, setMensList] = useState();
   const params = useParams();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    fetch(`http://10.58.7.109:8000/products/categories/${params.id}/types`)
-      .then(res => res.json())
-      .then(res => {
-        setMensList(res.message);
-      });
-  }, [params.id]);
+  //백엔드 API
+  // useEffect(() => {
+  //   fetch(`http://10.58.7.109:8000/products/categories/${params.id}/types`)
+  //     .then(res => res.json())
+  //     .then(res => {
+  //       setMensList(res.message);
+  //     });
+  // }, [params.id]);
 
-  console.log(mensList);
+  // console.log(mensList);
 
   return (
     <div>
@@ -37,7 +38,9 @@ const Mens = () => {
               ></img>
             )}
           </div>
-          {/* <div className="smallImage">
+
+          {/* 백엔드 API를 가져와서 보여주는 Veiw
+          <div className="smallImage">
             {mensList &&
               mensList.map(men => {
                 return <MensList key={men.type_id} men={men} />;

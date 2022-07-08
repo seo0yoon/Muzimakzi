@@ -1,26 +1,35 @@
 import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
+
 import CartItemCell from './components/CartItemCell';
 import './Cart.scss';
 
 const Cart = () => {
-  const [cartItems, setCartItems] = useState();
+  const [cartItems, setCartItems] = useState([]);
+  const carts = useSelector(state => state.cart);
+
   let priceSum = 0;
   let shippingFee = 3000;
 
   const getCartData = () => {
-    fetch('http://10.58.7.109:8000/carts', {
-      headers: {
-        Authorization: localStorage.getItem('TOKEN'),
-      },
-    })
-      .then(response => response.json())
-      .then(data => {
-        data.message === 'NO ITEM IN CART' || setCartItems(data.message);
-      });
+    /* 백엔드 API */
+    // fetch('http://10.58.7.109:8000/carts', {
+    //   headers: {
+    //     Authorization: localStorage.getItem('TOKEN'),
+    //   },
+    // })
+    //   .then(response => response.json())
+    //   .then(data => {
+    //     data.message === 'NO ITEM IN CART' || setCartItems(data.message);
+    //   });
+    // fetch('/data/CartData.json')
+    //   .then(response => response.json())
+    //   .then(data => setCartItems(data));
   };
 
   useEffect(() => {
     getCartData();
+    setCartItems(carts);
   }, []);
 
   return (

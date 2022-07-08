@@ -73,7 +73,7 @@ const Nav = () => {
                 onClick={handleMypage}
               />
             </Link>
-            {localStorage.length ? (
+            {!localStorage.length ? (
               <Link to="/cart">
                 <button type="button" className="btnCart" />
               </Link>

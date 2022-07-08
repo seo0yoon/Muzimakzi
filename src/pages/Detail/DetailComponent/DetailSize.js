@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import '../DetailComponent/DetailSize.scss';
 
-const DetailSize = () => {
-  const [sizeCount, setSizeCount] = useState();
-
+const DetailSize = ({ sizeCount, setSizeCount }) => {
   return (
     <div className="detailSize">
       <div className="sizeSelect">
@@ -15,18 +13,18 @@ const DetailSize = () => {
         />
       </div>
       <ul className="detatilSizeImg">
-        {DETAIL_SIZE.map(({ id, thumbnail }) => {
+        {DETAIL_SIZE.map(({ id, thumbnail, name }) => {
           return (
             <li
               className={
-                sizeCount === id ? 'detailSizeClicked' : 'detatilSizeListImg'
+                sizeCount === name ? 'detailSizeClicked' : 'detatilSizeListImg'
               }
               key={id}
             >
               <img
                 className="detatilThumbnai"
                 src={thumbnail}
-                onClick={() => setSizeCount(id)}
+                onClick={() => setSizeCount(name)}
                 alt="thumbnail"
               />
             </li>
@@ -42,18 +40,22 @@ export default DetailSize;
 const DETAIL_SIZE = [
   {
     id: 1,
+    name: 'S',
     thumbnail: 'http://image.mujikorea.net/goodsProp/chip/chip_SIZE_S.gif',
   },
   {
     id: 2,
+    name: 'M',
     thumbnail: 'http://image.mujikorea.net/goodsProp/chip/chip_SIZE_M.gif',
   },
   {
     id: 3,
+    name: 'L',
     thumbnail: 'http://image.mujikorea.net/goodsProp/chip/chip_SIZE_L.gif',
   },
   {
     id: 4,
+    name: 'XL',
     thumbnail: 'http://image.mujikorea.net/goodsProp/chip/chip_SIZE_XL.gif',
   },
 ];
