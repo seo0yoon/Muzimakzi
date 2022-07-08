@@ -32,20 +32,30 @@
     text-align: center;
     border-bottom: 1px dotted gray;
     border-right: 1px dotted gray;
-    ul {
-      li {
-        margin: 2px 0;
+    .amountBtn {
+      .handleBtn {
+        display: flex;
+        .handleAmount {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 20px;
+        }
+        .handleMinus {
+          width: 15px;
+        }
+        .handleAdd {
+          width: 15px;
+        }
       }
-      input {
-        width: 70%;
-      }
-      button {
-        width: 70%;
-        border: 1px solid $muziGray;
-        font-size: 12px;
-        border-radius: 2px;
-        box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1);
-      }
+    }
+
+    button {
+      width: 70%;
+      border: 1px solid $muziGray;
+      font-size: 12px;
+      border-radius: 2px;
+      box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1);
     }
   }
   .prdSum {

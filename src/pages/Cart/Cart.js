@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-
 import CartItemCell from './components/CartItemCell';
 import './Cart.scss';
 
@@ -10,6 +9,26 @@ const Cart = () => {
 
   let priceSum = 0;
   let shippingFee = 3000;
+
+  const handleAdd = () => {
+    const addQty = cartItems.map(cartItem => {
+      if (cartItem.id === cartItem.id && cartItem.count < 10) {
+        return { ...cartItem, count: cartItem.count + 1 };
+      } else return cartItem;
+    });
+    setCartItems(addQty);
+  };
+
+  const handleMin = () => {
+    const addMin = cartItems.map(cartItem => {
+      if (cartItem.id === cartItem.id && cartItem.count > 1) {
+        return { ...cartItem, count: cartItem.count - 1 };
+      } else return cartItem;
+    });
+    setCartItems(addMin);
+  };
+
+  console.log(cartItems);
 
   const getCartData = () => {
     /* 백엔드 API */
@@ -84,6 +103,8 @@ const Cart = () => {
                     key={id}
                     cartItem={cartItem}
                     getCartData={getCartData}
+                    handleAdd={handleAdd}
+                    handleMin={handleMin}
                   />
                 );
               })

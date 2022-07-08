@@ -2,7 +2,10 @@ import React, { useState } from 'react';
 import './CartItemCell.scss';
 const CartItemCell = ({
   cartItem: { name, size, color, price, thumbnail, count, id },
+
   getCartData,
+  handleAdd,
+  handleMin,
 }) => {
   const [itemCount, setItemCount] = useState(count);
 
@@ -46,20 +49,38 @@ const CartItemCell = ({
         <p>[판매가] {parseInt(price).toLocaleString()}</p>
       </td>
       <td className="prdQty">
-        <ul>
-          <li>
-            <input
-              type="number"
-              min="1"
-              max="10"
+        <div className="amountBtn">
+          <div className="handleBtn">
+            <div className="handleAmount">{count}</div>
+            <button
+              className="handleMinus"
               onChange={handleCount}
-              value={itemCount}
-            />
-          </li>
-          <li>
-            <button onClick={handleChangeCount}>변경</button>
-          </li>
-        </ul>
+              onClick={() => handleMin()}
+            >
+              -
+            </button>
+            <button
+              className="handleAdd"
+              onChange={handleCount}
+              onClick={() => handleAdd()}
+            >
+              +
+            </button>
+          </div>
+        </div>
+        {/* <li>
+          <input
+            type="number"
+            min="1"
+            max="10"
+            onChange={handleCount}
+            value={itemCount}
+            onClick={() => handleAdd()}
+          />
+        </li> */}
+        <li>
+          <button onClick={handleChangeCount}>변경</button>
+        </li>
       </td>
       <td className="prdSum">
         <p>{parseInt(sum).toLocaleString()} 원</p>
