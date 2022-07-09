@@ -55,14 +55,14 @@ const CartItemCell = ({
             <button
               className="handleMinus"
               onChange={handleCount}
-              onClick={() => handleMin()}
+              onClick={() => handleMin(id, color, size)}
             >
               -
             </button>
             <button
               className="handleAdd"
               onChange={handleCount}
-              onClick={() => handleAdd()}
+              onClick={e => handleAdd(id, color, size)}
             >
               +
             </button>

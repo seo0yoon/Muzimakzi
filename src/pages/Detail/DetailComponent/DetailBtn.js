@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../DetailComponent/DetailBtn.scss';
 
-const DetailBtn = ({ createCartItem, openCartModal }) => {
+const DetailBtn = ({ createCartItem }) => {
   const navigate = useNavigate();
 
   const goToCart = clickColor => {
@@ -16,7 +16,6 @@ const DetailBtn = ({ createCartItem, openCartModal }) => {
         className="basketBtn"
         onClick={() => {
           createCartItem();
-          openCartModal();
         }}
       >
         장바구니

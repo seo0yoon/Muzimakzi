@@ -28,16 +28,6 @@ const Detail = () => {
     4: `${findItem?.small_thumnail_image[3].thumbnail_url}`,
   };
 
-  console.log(
-    id,
-    findItem?.name,
-    sizeCount,
-    clickColor,
-    clickCount,
-    findItem?.price,
-    bigColorImg[clickColorChange]
-  );
-
   const handleCountUpClick = () => {
     if (clickCount < 10) {
       setClickCount(prevClickCount => prevClickCount + 1);
@@ -62,6 +52,14 @@ const Detail = () => {
       });
   };
 
+  const openCartModal = () => {
+    setIsOpenCartModal(!isOpenCartModal);
+  };
+
+  const closeCartModal = () => {
+    setIsOpenCartModal(false);
+  };
+
   const createCartItem = () => {
     const data = {
       id,
@@ -72,15 +70,13 @@ const Detail = () => {
       price: findItem?.price,
       thumbnail: bigColorImg[clickColorChange],
     };
-    dispatch(cartActions.create(data));
-  };
 
-  const openCartModal = () => {
-    setIsOpenCartModal(!isOpenCartModal);
-  };
-
-  const closeCartModal = () => {
-    setIsOpenCartModal(false);
+    if (clickColor && sizeCount) {
+      dispatch(cartActions.create(data));
+      openCartModal();
+    } else {
+      alert('옵션을 선택해주세요.');
+    }
   };
 
   useEffect(() => {

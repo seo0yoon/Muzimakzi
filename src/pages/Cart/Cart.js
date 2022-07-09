@@ -10,25 +10,33 @@ const Cart = () => {
   let priceSum = 0;
   let shippingFee = 3000;
 
-  const handleAdd = () => {
-    const addQty = cartItems.map(cartItem => {
-      if (cartItem.id === cartItem.id && cartItem.count < 10) {
+  const handleAdd = (id, color, size) => {
+    const addCountUp = cartItems.map(cartItem => {
+      if (
+        (cartItem.id === id) &
+          (cartItem.color === color) &
+          (cartItem.size === size) &&
+        cartItem.count < 10
+      ) {
         return { ...cartItem, count: cartItem.count + 1 };
       } else return cartItem;
     });
-    setCartItems(addQty);
+    setCartItems(addCountUp);
   };
 
-  const handleMin = () => {
-    const addMin = cartItems.map(cartItem => {
-      if (cartItem.id === cartItem.id && cartItem.count > 1) {
+  const handleMin = (id, color, size) => {
+    const addCountDown = cartItems.map(cartItem => {
+      if (
+        (cartItem.id === id) &
+          (cartItem.color === color) &
+          (cartItem.size === size) &&
+        cartItem.count > 1
+      ) {
         return { ...cartItem, count: cartItem.count - 1 };
       } else return cartItem;
     });
-    setCartItems(addMin);
+    setCartItems(addCountDown);
   };
-
-  console.log(cartItems);
 
   const getCartData = () => {
     /* 백엔드 API */
