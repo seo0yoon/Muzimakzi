@@ -9,7 +9,7 @@ import './Detail.scss';
 
 const Detail = () => {
   const [isOpenCartModal, setIsOpenCartModal] = useState(false);
-  const [clickColor, setClickColor] = useState();
+  const [clickColor, setClickColor] = useState(0);
   const [clickCount, setClickCount] = useState(1);
   const [clickColorChange, setClickColorChange] = useState(0);
   const [detailData, setDetailDate] = useState([]);
@@ -22,10 +22,10 @@ const Detail = () => {
 
   const bigColorImg = {
     0: `${findItem?.thumbnail_image_url}`,
-    1: `${findItem?.small_thumnail_image[0].thumbnail_url}`,
-    2: `${findItem?.small_thumnail_image[1].thumbnail_url}`,
-    3: `${findItem?.small_thumnail_image[2].thumbnail_url}`,
-    4: `${findItem?.small_thumnail_image[3].thumbnail_url}`,
+    Purple: `${findItem?.small_thumnail_image[0].thumbnail_url}`,
+    Blue: `${findItem?.small_thumnail_image[1].thumbnail_url}`,
+    Orange: `${findItem?.small_thumnail_image[2].thumbnail_url}`,
+    Green: `${findItem?.small_thumnail_image[3].thumbnail_url}`,
   };
 
   const handleCountUpClick = () => {
@@ -68,7 +68,7 @@ const Detail = () => {
       color: clickColor,
       count: clickCount,
       price: findItem?.price,
-      thumbnail: bigColorImg[clickColorChange],
+      thumbnail: bigColorImg[clickColor],
     };
 
     if (clickColor && sizeCount) {
@@ -90,27 +90,27 @@ const Detail = () => {
     <div className="detail">
       <div className="detailWrap">
         <div className="imageWrap">
-          <img
-            className="bigImg"
-            src={bigColorImg[clickColorChange]}
-            alt="니트"
-          />
+          <img className="bigImg" src={bigColorImg[clickColor]} alt="니트" />
           <ul className="smallImgWrap">
-            {findItem?.small_thumnail_image.map(({ id, thumbnail_url }) => {
-              return (
-                <li
-                  className="smallImgLi"
-                  key={id}
-                  onClick={() => setClickColorChange(id)}
-                >
-                  <img
-                    className="smallImg"
-                    src={thumbnail_url}
-                    alt="thumbnail"
-                  />
-                </li>
-              );
-            })}
+            {findItem?.small_thumnail_image.map(
+              ({ id, thumbnail_url, color }) => {
+                return (
+                  <li
+                    className="smallImgLi"
+                    key={id}
+                    onClick={() => {
+                      setClickColor(color);
+                    }}
+                  >
+                    <img
+                      className="smallImg"
+                      src={thumbnail_url}
+                      alt="thumbnail"
+                    />
+                  </li>
+                );
+              }
+            )}
           </ul>
         </div>
         <div className="detailBox">
@@ -151,7 +151,20 @@ const Detail = () => {
                       type="radio"
                       value={color}
                       checked={clickColor === color}
-                      onChange={() => setClickColor(color)}
+                      onChange={() => {
+                        setClickColor(color);
+                        setClickColorChange(
+                          color === 'Purple'
+                            ? 1
+                            : color === 'Blue'
+                            ? 2
+                            : color === 'Orange'
+                            ? 3
+                            : color === 'Green'
+                            ? 4
+                            : 0
+                        );
+                      }}
                     />
                     <label>{color}</label>
                   </div>

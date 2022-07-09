@@ -6,18 +6,22 @@
       "small_thumnail_image": [
         {
           "id": 1,
+          "color": "Purple",
           "thumbnail_url": "/images/menswear/작은니트2.jpg"
         },
         {
           "id": 2,
+          "color": "Blue",
           "thumbnail_url": "/images/menswear/작은니트3.jpg"
         },
         {
           "id": 3,
+          "color": "Orange",
           "thumbnail_url": "/images/menswear/작은니트4.jpg"
         },
         {
           "id": 4,
+          "color": "Green",
           "thumbnail_url": "/images/menswear/작은니트5.jpg"
         }
       ],
@@ -31,18 +35,22 @@
       "small_thumnail_image": [
         {
           "id": 1,
+          "color": "Purple",
           "thumbnail_url": "/images/menswear/작은남자니트1 (1).jpg"
         },
         {
           "id": 2,
+          "color": "Blue",
           "thumbnail_url": "/images/menswear/작은남자니트1 (2).jpg"
         },
         {
           "id": 3,
+          "color": "Orange",
           "thumbnail_url": "/images/menswear/작은남자니트1 (3).jpg"
         },
         {
           "id": 4,
+          "color": "Green",
           "thumbnail_url": "/images/menswear/작은남자니트1 (4).jpg"
         }
       ],
@@ -56,18 +64,22 @@
       "small_thumnail_image": [
         {
           "id": 1,
+          "color": "Purple",
           "thumbnail_url": "/images/menswear/작은남자니트2 (1).jpg"
         },
         {
           "id": 2,
+          "color": "Blue",
           "thumbnail_url": "/images/menswear/작은남자니트2 (2).jpg"
         },
         {
           "id": 3,
+          "color": "Orange",
           "thumbnail_url": "/images/menswear/작은남자니트2 (3).jpg"
         },
         {
           "id": 4,
+          "color": "Green",
           "thumbnail_url": "/images/menswear/작은남자니트2 (4).jpg"
         }
       ],
@@ -81,18 +93,22 @@
       "small_thumnail_image": [
         {
           "id": 1,
+          "color": "Purple",
           "thumbnail_url": "/images/menswear/작은남자니트3 (1).jpg"
         },
         {
           "id": 2,
+          "color": "Blue",
           "thumbnail_url": "/images/menswear/작은남자니트3 (2).jpg"
         },
         {
           "id": 3,
+          "color": "Orange",
           "thumbnail_url": "/images/menswear/작은남자니트3 (3).jpg"
         },
         {
           "id": 4,
+          "color": "Green",
           "thumbnail_url": "/images/menswear/작은남자니트3 (4).jpg"
         }
       ],
@@ -106,19 +122,23 @@
       "small_thumnail_image": [
         {
           "id": 1,
-          "thumbnail_url": "/images/menswear/작은니트2.jpg"
+          "color": "Purple",
+          "thumbnail_url": "../images/menswear/작은남자니트6 (1).jpg"
         },
         {
           "id": 2,
-          "thumbnail_url": "/images/menswear/작은니트3.jpg"
+          "color": "Blue",
+          "thumbnail_url": "../images/menswear/작은남자니트6 (2).jpg"
         },
         {
           "id": 3,
-          "thumbnail_url": "/images/menswear/작은니트4.jpg"
+          "color": "Orange",
+          "thumbnail_url": "../images/menswear/작은남자니트6 (3).jpg"
         },
         {
           "id": 4,
-          "thumbnail_url": "/images/menswear/작은니트5.jpg"
+          "color": "Green",
+          "thumbnail_url": "../images/menswear/작은남자니트6 (4).jpg"
         }
       ],
       "name": "인도 수제직 · 롱 스웨터",
@@ -131,19 +151,23 @@
       "small_thumnail_image": [
         {
           "id": 1,
-          "thumbnail_url": "/images/menswear/작은니트2.jpg"
+          "color": "Purple",
+          "thumbnail_url": "../images/menswear/작은남자니트7 (1).jpg"
         },
         {
           "id": 2,
-          "thumbnail_url": "/images/menswear/작은니트3.jpg"
+          "color": "Blue",
+          "thumbnail_url": "../images/menswear/작은남자니트7 (2).jpg"
         },
         {
           "id": 3,
-          "thumbnail_url": "/images/menswear/작은니트4.jpg"
+          "color": "Orange",
+          "thumbnail_url": "../images/menswear/작은남자니트7 (3).jpg"
         },
         {
           "id": 4,
-          "thumbnail_url": "/images/menswear/작은니트5.jpg"
+          "color": "Green",
+          "thumbnail_url": "../images/menswear/작은남자니트7 (4).jpg"
         }
       ],
       "name": "메리노 울 미들 게이지 크루넥 스웨터",
@@ -156,19 +180,23 @@
       "small_thumnail_image": [
         {
           "id": 1,
-          "thumbnail_url": "/images/menswear/작은니트2.jpg"
+          "color": "Purple",
+          "thumbnail_url": "../images/menswear/작은남자니트8 (1).jpg"
         },
         {
           "id": 2,
-          "thumbnail_url": "/images/menswear/작은니트3.jpg"
+          "color": "Blue",
+          "thumbnail_url": "../images/menswear/작은남자니트8 (2).jpg"
         },
         {
           "id": 3,
-          "thumbnail_url": "/images/menswear/작은니트4.jpg"
+          "color": "Orange",
+          "thumbnail_url": "../images/menswear/작은남자니트8 (3).jpg"
         },
         {
           "id": 4,
-          "thumbnail_url": "/images/menswear/작은니트5.jpg"
+          "color": "Green",
+          "thumbnail_url": "../images/menswear/작은남자니트8 (4).jpg"
         }
       ],
       "name": "나무열매로 만든 · 스웨터",
@@ -181,19 +209,23 @@
       "small_thumnail_image": [
         {
           "id": 1,
-          "thumbnail_url": "/images/menswear/작은니트2.jpg"
+          "color": "Purple",
+          "thumbnail_url": "../images/menswear/작은남자니트9 (1).jpg"
         },
         {
           "id": 2,
-          "thumbnail_url": "/images/menswear/작은니트3.jpg"
+          "color": "Blue",
+          "thumbnail_url": "../images/menswear/작은남자니트9 (2).jpg"
         },
         {
           "id": 3,
-          "thumbnail_url": "/images/menswear/작은니트4.jpg"
+          "color": "Orange",
+          "thumbnail_url": "../images/menswear/작은남자니트9 (3).jpg"
         },
         {
           "id": 4,
-          "thumbnail_url": "/images/menswear/작은니트5.jpg"
+          "color": "Green",
+          "thumbnail_url": "../images/menswear/작은남자니트9 (4).jpg"
         }
       ],
       "name": "메리노 울 워셔블 하이넥 스웨터",
@@ -206,19 +238,23 @@
       "small_thumnail_image": [
         {
           "id": 1,
-          "thumbnail_url": "/images/menswear/작은니트2.jpg"
+          "color": "Purple",
+          "thumbnail_url": "../images/menswear/작은남자니트10 (1).jpg"
         },
         {
           "id": 2,
-          "thumbnail_url": "/images/menswear/작은니트3.jpg"
+          "color": "Blue",
+          "thumbnail_url": "../images/menswear/작은남자니트10 (2).jpg"
         },
         {
           "id": 3,
-          "thumbnail_url": "/images/menswear/작은니트4.jpg"
+          "color": "Orange",
+          "thumbnail_url": "../images/menswear/작은남자니트10 (3).jpg"
         },
         {
           "id": 4,
-          "thumbnail_url": "/images/menswear/작은니트5.jpg"
+          "color": "Green",
+          "thumbnail_url": "../images/menswear/작은남자니트10 (4).jpg"
         }
       ],
       "name": "메리노 울 워셔블 밴딩 스웨터",
@@ -231,19 +267,23 @@
       "small_thumnail_image": [
         {
           "id": 1,
-          "thumbnail_url": "/images/menswear/작은니트2.jpg"
+          "color": "Purple",
+          "thumbnail_url": "../images/menswear/작은남자니트11 (1).jpg"
         },
         {
           "id": 2,
-          "thumbnail_url": "/images/menswear/작은니트3.jpg"
+          "color": "Blue",
+          "thumbnail_url": "../images/menswear/작은남자니트11 (2).jpg"
         },
         {
           "id": 3,
-          "thumbnail_url": "/images/menswear/작은니트4.jpg"
+          "color": "Orange",
+          "thumbnail_url": "../images/menswear/작은남자니트11 (3).jpg"
         },
         {
           "id": 4,
-          "thumbnail_url": "/images/menswear/작은니트5.jpg"
+          "color": "Green",
+          "thumbnail_url": "../images/menswear/작은남자니트11 (4).jpg"
         }
       ],
       "name": "메리노 울 미들게이지 크루넥 스웨터",
@@ -256,18 +296,22 @@
       "small_thumnail_image": [
         {
           "id": 1,
-          "thumbnail_url": "/images/womenswear/작은옷3 (1).png"
-        },
-        {
-          "id": 2,
-          "thumbnail_url": "/images/womenswear/작은옷3 (2).png"
-        },
-        {
-          "id": 3,
+          "color": "Purple",
           "thumbnail_url": "/images/womenswear/작은옷3 (3).png"
         },
         {
+          "id": 2,
+          "color": "Blue",
+          "thumbnail_url": "/images/womenswear/작은옷3 (1).png"
+        },
+        {
+          "id": 3,
+          "color": "Orange",
+          "thumbnail_url": "/images/womenswear/작은옷3 (2).png"
+        },
+        {
           "id": 4,
+          "color": "Green",
           "thumbnail_url": "/images/womenswear/작은옷3 (4).png"
         }
       ],
@@ -281,19 +325,23 @@
       "small_thumnail_image": [
         {
           "id": 1,
-          "thumbnail_url": "/images/womenswear/작은옷2 (1).png"
-        },
-        {
-          "id": 2,
+          "color": "Purple",
           "thumbnail_url": "/images/womenswear/작은옷2 (2).png"
         },
         {
+          "id": 2,
+          "color": "Blue",
+          "thumbnail_url": "/images/womenswear/작은옷2 (4).png"
+        },
+        {
           "id": 3,
+          "color": "Orange",
           "thumbnail_url": "/images/womenswear/작은옷2 (3).png"
         },
         {
           "id": 4,
-          "thumbnail_url": "/images/womenswear/작은옷2 (4).png"
+          "color": "Green",
+          "thumbnail_url": "/images/womenswear/작은옷2 (1).png"
         }
       ],
       "name": "프렌치 리넨 · 포켓 사양 머리띠",
@@ -306,19 +354,23 @@
       "small_thumnail_image": [
         {
           "id": 1,
-          "thumbnail_url": "/images/womenswear/작은옷1 (1).png"
+          "color": "Purple",
+          "thumbnail_url": "/images/womenswear/작은옷1 (4).png"
         },
         {
           "id": 2,
-          "thumbnail_url": "/images/womenswear/작은옷1 (2).png"
-        },
-        {
-          "id": 3,
+          "color": "Blue",
           "thumbnail_url": "/images/womenswear/작은옷1 (3).png"
         },
         {
+          "id": 3,
+          "color": "Orange",
+          "thumbnail_url": "/images/womenswear/작은옷1 (1).png"
+        },
+        {
           "id": 4,
-          "thumbnail_url": "/images/womenswear/작은옷1 (4).png"
+          "color": "Green",
+          "thumbnail_url": "/images/womenswear/작은옷1 (2).png"
         }
       ],
       "name": "스트레치 저지 · 캐미솔",
@@ -331,19 +383,23 @@
       "small_thumnail_image": [
         {
           "id": 1,
-          "thumbnail_url": "/images/womenswear/작은옷4 (1).png"
+          "color": "Purple",
+          "thumbnail_url": "/images/womenswear/작은옷4 (4).png"
         },
         {
           "id": 2,
-          "thumbnail_url": "/images/womenswear/작은옷4 (2).png"
-        },
-        {
-          "id": 3,
+          "color": "Blue",
           "thumbnail_url": "/images/womenswear/작은옷4 (3).png"
         },
         {
+          "id": 3,
+          "color": "Orange",
+          "thumbnail_url": "/images/womenswear/작은옷4 (2).png"
+        },
+        {
           "id": 4,
-          "thumbnail_url": "/images/womenswear/작은옷4 (4).png"
+          "color": "Green",
+          "thumbnail_url": "/images/womenswear/작은옷4 (1).png"
         }
       ],
       "name": "스트레치 트윌 · 턱 스커트 · 마터니티",
@@ -357,19 +413,23 @@
       "small_thumnail_image": [
         {
           "id": 1,
-          "thumbnail_url": "/images/womenswear/작은옷6 (1).png"
-        },
-        {
-          "id": 2,
+          "color": "Purple",
           "thumbnail_url": "/images/womenswear/작은옷6 (2).png"
         },
         {
+          "id": 2,
+          "color": "Blue",
+          "thumbnail_url": "/images/womenswear/작은옷6 (4).png"
+        },
+        {
           "id": 3,
-          "thumbnail_url": "/images/womenswear/작은옷6 (3).png"
+          "color": "Orange",
+          "thumbnail_url": "/images/womenswear/작은옷6 (1).png"
         },
         {
           "id": 4,
-          "thumbnail_url": "/images/womenswear/작은옷6 (4).png"
+          "color": "Green",
+          "thumbnail_url": "/images/womenswear/작은옷6 (3).png"
         }
       ],
       "name": "스트레치 데님 · 스키니 팬츠",
@@ -382,19 +442,23 @@
       "small_thumnail_image": [
         {
           "id": 1,
-          "thumbnail_url": "/images/womenswear/작은옷5 (1).png"
+          "color": "Purple",
+          "thumbnail_url": "/images/womenswear/작은옷5 (4).png"
         },
         {
           "id": 2,
+          "color": "Blue",
           "thumbnail_url": "/images/womenswear/작은옷5 (2).png"
         },
         {
           "id": 3,
-          "thumbnail_url": "/images/womenswear/작은옷5 (3).png"
+          "color": "Orange",
+          "thumbnail_url": "/images/womenswear/작은옷5 (1).png"
         },
         {
           "id": 4,
-          "thumbnail_url": "/images/womenswear/작은옷5 (4).png"
+          "color": "Green",
+          "thumbnail_url": "/images/womenswear/작은옷5 (3).png"
         }
       ],
       "name": "발수 · 발이 편한 스니커 · 여성",
@@ -407,19 +471,23 @@
       "small_thumnail_image": [
         {
           "id": 1,
-          "thumbnail_url": "/images/menswear/작은니트2.jpg"
+          "color": "Purple",
+          "thumbnail_url": "/images/womenswear/작은여자옷3 (1).jpg"
         },
         {
           "id": 2,
-          "thumbnail_url": "/images/menswear/작은니트3.jpg"
+          "color": "Blue",
+          "thumbnail_url": "/images/womenswear/작은여자옷3 (2).jpg"
         },
         {
           "id": 3,
-          "thumbnail_url": "/images/menswear/작은니트4.jpg"
+          "color": "Orange",
+          "thumbnail_url": "/images/womenswear/작은여자옷3 (3).jpg"
         },
         {
           "id": 4,
-          "thumbnail_url": "/images/menswear/작은니트5.jpg"
+          "color": "Green",
+          "thumbnail_url": "/images/womenswear/작은여자옷3 (4).jpg"
         }
       ],
       "name": "슬러브 저지 · 프렌치 슬리브 티셔츠",
@@ -432,19 +500,23 @@
       "small_thumnail_image": [
         {
           "id": 1,
-          "thumbnail_url": "/images/menswear/작은니트2.jpg"
+          "color": "Purple",
+          "thumbnail_url": "/images/womenswear/여성1(3).jpg"
         },
         {
           "id": 2,
-          "thumbnail_url": "/images/menswear/작은니트3.jpg"
+          "color": "Blue",
+          "thumbnail_url": "/images/womenswear/여성1(3).jpg"
         },
         {
           "id": 3,
-          "thumbnail_url": "/images/menswear/작은니트4.jpg"
+          "color": "Orange",
+          "thumbnail_url": "/images/womenswear/여성1(3).jpg"
         },
         {
           "id": 4,
-          "thumbnail_url": "/images/menswear/작은니트5.jpg"
+          "color": "Green",
+          "thumbnail_url": "/images/womenswear/여성1(3).jpg"
         }
       ],
       "name": "포인티드 토 펌프스",
@@ -457,19 +529,23 @@
       "small_thumnail_image": [
         {
           "id": 1,
-          "thumbnail_url": "/images/menswear/작은니트2.jpg"
+          "color": "Purple",
+          "thumbnail_url": "/images/womenswear/여성1(9).jpg"
         },
         {
           "id": 2,
-          "thumbnail_url": "/images/menswear/작은니트3.jpg"
+          "color": "Blue",
+          "thumbnail_url": "/images/womenswear/여성1(9).jpg"
         },
         {
           "id": 3,
-          "thumbnail_url": "/images/menswear/작은니트4.jpg"
+          "color": "Orange",
+          "thumbnail_url": "/images/womenswear/여성1(9).jpg"
         },
         {
           "id": 4,
-          "thumbnail_url": "/images/menswear/작은니트5.jpg"
+          "color": "Green",
+          "thumbnail_url": "/images/womenswear/여성1(9).jpg"
         }
       ],
       "name": "메리노 울 워셔블 V넥 폴로 니트",
@@ -482,19 +558,23 @@
       "small_thumnail_image": [
         {
           "id": 1,
-          "thumbnail_url": "/images/menswear/작은니트2.jpg"
+          "color": "Purple",
+          "thumbnail_url": "/images/womenswear/작은여자옷1 (1).jpg"
         },
         {
           "id": 2,
-          "thumbnail_url": "/images/menswear/작은니트3.jpg"
+          "color": "Blue",
+          "thumbnail_url": "/images/womenswear/작은여자옷1 (2).jpg"
         },
         {
           "id": 3,
-          "thumbnail_url": "/images/menswear/작은니트4.jpg"
+          "color": "Orange",
+          "thumbnail_url": "/images/womenswear/작은여자옷1 (3).jpg"
         },
         {
           "id": 4,
-          "thumbnail_url": "/images/menswear/작은니트5.jpg"
+          "color": "Green",
+          "thumbnail_url": "/images/womenswear/작은여자옷1 (4).jpg"
         }
       ],
       "name": "발수 · 사코슈",
@@ -507,19 +587,23 @@
       "small_thumnail_image": [
         {
           "id": 1,
-          "thumbnail_url": "/images/menswear/작은니트2.jpg"
+          "color": "Purple",
+          "thumbnail_url": "/images/womenswear/작은여자옷 (1).jpg"
         },
         {
           "id": 2,
-          "thumbnail_url": "/images/menswear/작은니트3.jpg"
+          "color": "Blue",
+          "thumbnail_url": "/images/womenswear/작은여자옷 (2).jpg"
         },
         {
           "id": 3,
-          "thumbnail_url": "/images/menswear/작은니트4.jpg"
+          "color": "Orange",
+          "thumbnail_url": "/images/womenswear/작은여자옷 (3).jpg"
         },
         {
           "id": 4,
-          "thumbnail_url": "/images/menswear/작은니트5.jpg"
+          "color": "Green",
+          "thumbnail_url": "/images/womenswear/작은여자옷 (4).jpg"
         }
       ],
       "name": "크기 조절이 가능한 · 발수 보스턴 륙색",
@@ -532,19 +616,23 @@
       "small_thumnail_image": [
         {
           "id": 1,
-          "thumbnail_url": "/images/menswear/작은니트2.jpg"
+          "color": "Purple",
+          "thumbnail_url": "/images/womenswear/작은여자옷 2 (1).jpg"
         },
         {
           "id": 2,
-          "thumbnail_url": "/images/menswear/작은니트3.jpg"
+          "color": "Blue",
+          "thumbnail_url": "/images/womenswear/작은여자옷 2 (2).jpg"
         },
         {
           "id": 3,
-          "thumbnail_url": "/images/menswear/작은니트4.jpg"
+          "color": "Orange",
+          "thumbnail_url": "/images/womenswear/작은여자옷 2 (3).jpg"
         },
         {
           "id": 4,
-          "thumbnail_url": "/images/menswear/작은니트5.jpg"
+          "color": "Green",
+          "thumbnail_url": "/images/womenswear/작은여자옷 2 (4).jpg"
         }
       ],
       "name": "튼튼한 니트 원단 스커트",
