@@ -10,6 +10,27 @@ const Cart = () => {
   let priceSum = 0;
   let shippingFee = 3000;
 
+  const getCartData = () => {
+    /* 백엔드 API */
+    // fetch('http://10.58.7.109:8000/carts', {
+    //   headers: {
+    //     Authorization: localStorage.getItem('TOKEN'),
+    //   },
+    // })
+    //   .then(response => response.json())
+    //   .then(data => {
+    //     data.message === 'NO ITEM IN CART' || setCartItems(data.message);
+    //   });
+    // fetch('/data/CartData.json')
+    //   .then(response => response.json())
+    //   .then(data => setCartItems(data));
+  };
+
+  useEffect(() => {
+    getCartData();
+    setCartItems(carts);
+  }, [getCartData()]);
+
   const handleAdd = (id, color, size) => {
     const addCountUp = cartItems.map(cartItem => {
       if (
@@ -38,26 +59,18 @@ const Cart = () => {
     setCartItems(addCountDown);
   };
 
-  const getCartData = () => {
-    /* 백엔드 API */
-    // fetch('http://10.58.7.109:8000/carts', {
-    //   headers: {
-    //     Authorization: localStorage.getItem('TOKEN'),
-    //   },
-    // })
-    //   .then(response => response.json())
-    //   .then(data => {
-    //     data.message === 'NO ITEM IN CART' || setCartItems(data.message);
-    //   });
-    // fetch('/data/CartData.json')
-    //   .then(response => response.json())
-    //   .then(data => setCartItems(data));
+  const onDelete = (id, color, size) => {
+    setCartItems(
+      cartItems.filter(cartItem => {
+        return (
+          cartItem.id !== id ||
+          cartItem.color !== color ||
+          cartItem.size !== size
+        );
+      })
+    );
   };
-
-  useEffect(() => {
-    getCartData();
-    setCartItems(carts);
-  }, []);
+  console.log(cartItems);
 
   const handleShoppingClick = () => {
     alert(
@@ -104,8 +117,9 @@ const Cart = () => {
           <tbody className="cartListBody">
             {cartItems ? (
               cartItems.map((cartItem, id) => {
-                priceSum += cartItem.price * cartItem.count;
-                shippingFee = priceSum > 30000 && 3000;
+                priceSum = priceSum + cartItem.price * cartItem.count;
+                shippingFee = priceSum > 30000 ? 0 : 3000;
+
                 return (
                   <CartItemCell
                     key={id}
@@ -113,6 +127,7 @@ const Cart = () => {
                     getCartData={getCartData}
                     handleAdd={handleAdd}
                     handleMin={handleMin}
+                    onDelete={onDelete}
                   />
                 );
               })
@@ -126,11 +141,11 @@ const Cart = () => {
             <div className="cartSumResult">
               <div className="cartProductTotal">
                 <span>상품금액 합계 : </span>
-                <span>{parseInt(priceSum).toLocaleString()}원</span>
+                <span>{Math.floor(priceSum).toLocaleString()}원</span>
               </div>
               <div className="cartShippingFeeTotal">
                 <span>배송비 : </span>
-                <span>{parseInt(shippingFee).toLocaleString()}원</span>
+                <span>{Math.floor(shippingFee).toLocaleString()}원</span>
               </div>
             </div>
             <div className="devider" />
@@ -139,7 +154,7 @@ const Cart = () => {
                 <span>총 결제 예정 금액 : </span>
                 <span>
                   <span className="totalPriceText">
-                    {parseInt(priceSum + shippingFee).toLocaleString()}
+                    {Math.floor(priceSum + shippingFee).toLocaleString()}
                   </span>
                   원
                 </span>
@@ -149,7 +164,9 @@ const Cart = () => {
           <div className="cartResultBtn">
             <div>
               <span>선택한 상품</span>
-              <button className="deleteBtn">X 삭제하기</button>
+              <button className="deleteBtn" onClick={() => setCartItems()}>
+                X 삭제하기
+              </button>
             </div>
             <button className="goToShopping" onClick={handleShoppingClick}>
               계속 쇼핑하기

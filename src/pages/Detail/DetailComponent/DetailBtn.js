@@ -1,12 +1,9 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import '../DetailComponent/DetailBtn.scss';
 
 const DetailBtn = ({ createCartItem }) => {
-  const navigate = useNavigate();
-
-  const goToCart = clickColor => {
-    navigate('/cart');
+  const handleAlertCart = () => {
+    alert('서비스 준비중 입니다.');
   };
 
   return (
@@ -20,12 +17,7 @@ const DetailBtn = ({ createCartItem }) => {
       >
         장바구니
       </button>
-      <button
-        className="buyBtn"
-        onClick={() => {
-          goToCart();
-        }}
-      >
+      <button className="buyBtn" onClick={handleAlertCart}>
         바로구매
       </button>
     </div>

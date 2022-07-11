@@ -65,7 +65,6 @@ const Nav = () => {
                 onClick={handleLoginModal}
               />
             )}
-
             <Link to="/">
               <button
                 type="button"
@@ -73,6 +72,7 @@ const Nav = () => {
                 onClick={handleMypage}
               />
             </Link>
+            {/* 로그인 회원가입 코드
             {!localStorage.length ? (
               <Link to="/cart">
                 <button type="button" className="btnCart" />
@@ -85,7 +85,10 @@ const Nav = () => {
                 type="button"
                 className="btnCart"
               />
-            )}
+            )} */}
+            <Link to="/cart">
+              <button type="button" className="btnCart" />
+            </Link>
           </div>
         </div>
         <div className="navBottom">

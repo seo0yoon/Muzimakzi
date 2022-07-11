@@ -75,7 +75,7 @@ const Detail = () => {
       dispatch(cartActions.create(data));
       openCartModal();
     } else {
-      alert('옵션을 선택해주세요.');
+      alert('옵션을 모두 선택해주세요.');
     }
   };
 

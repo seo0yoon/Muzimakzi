@@ -6,6 +6,7 @@ const CartItemCell = ({
   getCartData,
   handleAdd,
   handleMin,
+  onDelete,
 }) => {
   const [itemCount, setItemCount] = useState(count);
 
@@ -16,10 +17,15 @@ const CartItemCell = ({
     setItemCount(value);
   };
 
-  const handleChangeCount = () => {
-    alert('수량을 변경하시겠습니까?');
-    alert('변경되었습니다.');
+  const handleAlertDelete = () => {
+    alert('더 나은 서비스를 위해 준비중 입니다. 조금만 기다려주세요!');
   };
+
+  // 백엔드 api 연결시 사용 코드
+  // const handleChangeCount = () => {
+  //   alert('수량을 변경하시겠습니까?');
+  //   alert('변경되었습니다.');
+  // };
 
   //백엔드 API
   // const deleteItem = () => {
@@ -46,7 +52,7 @@ const CartItemCell = ({
         </ul>
       </td>
       <td className="prdPrice">
-        <p>[판매가] {parseInt(price).toLocaleString()}</p>
+        <p>[판매가] {Math.floor(price).toLocaleString()}</p>
       </td>
       <td className="prdQty">
         <div className="amountBtn">
@@ -78,24 +84,31 @@ const CartItemCell = ({
             onClick={() => handleAdd()}
           />
         </li> */}
+
+        {/* 백엔드 api 연결시 사용 코드
         <li>
           <button onClick={handleChangeCount}>변경</button>
-        </li>
+        </li> */}
       </td>
       <td className="prdSum">
-        <p>{parseInt(sum).toLocaleString()} 원</p>
+        <p>{Math.floor(sum).toLocaleString()} 원</p>
       </td>
       <td className="prdOrder">
         <ul>
           <li>
-            <button className="orderBtn">바로주문</button>
+            <button className="orderBtn" onClick={handleAlertDelete}>
+              바로주문
+            </button>
           </li>
           <li>
             <button
               className="orderBtn"
+              // 백엔드 api
               // onClick={() => {
               //   deleteItem();
               // }}
+              // onClick={handleAlertDelete}
+              onClick={() => onDelete(id, color, size)}
             >
               삭제
             </button>

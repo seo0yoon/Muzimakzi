@@ -6,7 +6,6 @@ import './List.scss';
 
 const List = () => {
   const [products, setProducts] = useState([]);
-
   const location = useLocation();
   const onlineSize = location.search.includes('tags=1');
   const freeShipping = location.search.includes('tags=2');
