@@ -1,8 +1,8 @@
-# 👔 MUZIMAKZI
+# 🛒 MUZIMAKZI
 
 ## Member: 윤서영, 임재혁, 문혜성, 노규현
 
-[MUZIMAKZI](http://muzimakji.s3-website.ap-northeast-2.amazonaws.com/) <br/>
+🔗[MUZIMAKZI](http://muzimakji.s3-website.ap-northeast-2.amazonaws.com/) <br/>
 
 ## Introduction
 
@@ -36,20 +36,22 @@
 
 - UI 제작
 
-#### mens list page
+#### Mens list page
 
 - UI 및 filter 기능 구현.
 
 ## 현재까지 Refectoring 완료한 페이지
 
-#### mens list page, womens list page
+#### Mens list page, Womens list page
 
 - Mock Data 변경, filter 기능 수정, image file 추가
 
-#### mens detail page, womens detail page
+#### Mens detail page, Womens detail page
 
 - html, scss 추가, Mock Data 변경, Cart Modal 추가, alert 기능 추가
 
-#### cart page
+#### Cart age
 
 - Mock Data 변경, delete기능 추가, sum 기능 추가, count 기능 추가
+
+#### Aside
