@@ -42,6 +42,10 @@
 
 ## 현재까지 Refectoring 완료한 페이지
 
+#### Aside
+
+- Mock Data 변경, 'click'시 'Active'효과 추가, ListLanding page Ui 제작 및 연결
+
 #### Mens list page, Womens list page
 
 - Mock Data 변경, filter 기능 수정, image file 추가
@@ -50,8 +54,6 @@
 
 - html, scss 추가, Mock Data 변경, Cart Modal 추가, alert 기능 추가
 
-#### Cart age
+#### Cart page
 
 - Mock Data 변경, delete기능 추가, sum 기능 추가, count 기능 추가
-
-#### Aside
