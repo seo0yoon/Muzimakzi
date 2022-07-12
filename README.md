@@ -8,7 +8,7 @@
 
 - 기간: 2022-03-28 ~ 2022-04-08
 - 구성: Front-end 4명(with 서영, 재혁, 혜성, 규현), Back-end 2명 (with 강호, 재홍)
-  <img width="500" alt="1차 프로젝트 무지막지" src="C:\Users\82104\Downloads\iOS 이미지 (49).jpg">
+  <img width="500" alt="1차 프로젝트 무지막지" src="/images/iOS 이미지 (49).jpg">
 
 ## 사용한 기술
 
@@ -40,8 +40,12 @@ mens list page
 
 mens list page, womens list page
 
-- Mock Data 변경, filter 기능 추가, image 추가
-  mens detail page, womens detail page
+- Mock Data 변경, filter 기능 수정, image file 추가
+
+mens detail page, womens detail page
+
 - html, scss 추가, Mock Data 변경, Cart Modal 추가, alert 기능 추가
-  cart page
+
+cart page
+
 - Mock Data 변경, delete기능 추가, sum 기능 추가, count 기능 추가
