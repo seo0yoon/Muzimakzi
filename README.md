@@ -8,7 +8,7 @@
 
 - 기간: 2022-03-28 ~ 2022-04-08
 - 구성: Front-end 4명(with 서영, 재혁, 혜성, 규현), Back-end 2명 (with 강호, 재홍)
-  <img width="500" height="250" alt="1차 프로젝트 무지막지" src="https://user-images.githubusercontent.com/97905881/178452379-3d3c3619-c5b7-4d43-b2f9-c71a5e6edbc2.jpg">
+  <img width="700" height="525" alt="1차 프로젝트 무지막지" src="https://user-images.githubusercontent.com/97905881/178452379-3d3c3619-c5b7-4d43-b2f9-c71a5e6edbc2.jpg">
 
 ## 사용한 기술
 
