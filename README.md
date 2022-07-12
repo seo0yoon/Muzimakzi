@@ -29,16 +29,19 @@ Trello
 ![후반](https://user-images.githubusercontent.com/91510831/162604372-ce705b3f-7963-4a8f-863b-cc0f7963addd.gif)
 ![카트](https://user-images.githubusercontent.com/91510831/162604400-48bd27bb-2328-4c18-abce-2c3505b2ad44.gif)
 
-## 내가 구현한 기능
+## 내가 구현한 페이지
 
 Labo page
 mens list page
-womens list page
 
-## Refectoring 완료
+- filter 기능 구현.
 
-mens list page
-womens list page
-mens detail page
-womens detail page
-cart page
+## 현재까지 Refectoring 완료한 페이지
+
+mens list page, womens list page
+
+- Mock Data 변경, filter 기능 추가, image 추가
+  mens detail page, womens detail page
+- html, scss 추가, Mock Data 변경, Cart Modal 추가, alert 기능 추가
+  cart page
+- Mock Data 변경, delete기능 추가, sum 기능 추가, count 기능 추가
