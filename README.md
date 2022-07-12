@@ -8,19 +8,20 @@
 
 - 기간: 2022-03-28 ~ 2022-04-08
 - 구성: Front-end 4명(with 서영, 재혁, 혜성, 규현), Back-end 2명 (with 강호, 재홍)
+
   <img width="700" height="525" alt="1차 프로젝트 무지막지" src="https://user-images.githubusercontent.com/97905881/178452379-3d3c3619-c5b7-4d43-b2f9-c71a5e6edbc2.jpg">
 
 ## 사용한 기술
 
-React.js
-SASS
-AWS
+- React.js
+- SASS
+- AWS
 
 ## 협업 툴
 
-Git, Github
-Slack
-Trello
+- Git, Github
+- Slack
+- Trello
 
 ## 시연 영상
 
@@ -31,21 +32,24 @@ Trello
 
 ## 내가 구현한 페이지
 
-Labo page
-mens list page
+#### Labo page
 
-- filter 기능 구현.
+- UI 제작
+
+#### mens list page
+
+- UI 및 filter 기능 구현.
 
 ## 현재까지 Refectoring 완료한 페이지
 
-mens list page, womens list page
+#### mens list page, womens list page
 
 - Mock Data 변경, filter 기능 수정, image file 추가
 
-mens detail page, womens detail page
+#### mens detail page, womens detail page
 
 - html, scss 추가, Mock Data 변경, Cart Modal 추가, alert 기능 추가
 
-cart page
+#### cart page
 
 - Mock Data 변경, delete기능 추가, sum 기능 추가, count 기능 추가
