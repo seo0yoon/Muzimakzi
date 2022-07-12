@@ -49,6 +49,7 @@
 #### Mens list page, Womens list page
 
 - Mock Data 변경, filter 기능 수정, image file 추가
+  [Blog](https://seo0yoon.tistory.com/170)
 
 #### Mens detail page, Womens detail page
 
