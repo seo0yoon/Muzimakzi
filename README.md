@@ -45,6 +45,7 @@
 #### Aside
 
 - Mock Data 변경, 'click'시 'Active'효과 추가, ListLanding page Ui 제작 및 연결
+  [Blog](https://seo0yoon.tistory.com/171)
 
 #### Mens list page, Womens list page
 

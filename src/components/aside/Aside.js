@@ -30,7 +30,7 @@ const Aside = () => {
     navigate(queryString);
   };
 
-  const handleOnClick = (e, id) => {
+  const handleOnClick = id => {
     setCountIndex(id);
   };
 
@@ -50,7 +50,7 @@ const Aside = () => {
                     className={countIndex === id ? 'categoryType' : 'btnBold'}
                     onClick={e => {
                       productList(id);
-                      handleOnClick(e, id);
+                      handleOnClick(id);
                       goToListLanding(id);
                     }}
                   >
