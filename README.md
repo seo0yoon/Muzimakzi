@@ -60,3 +60,7 @@
 #### Cart page
 
 - Mock Data 변경, delete기능 추가, sum 기능 추가, count 기능 추가
+
+## 추가구현 할 페이지 & 수정사항
+
+####Cart page delet기능 버그 수정 ####소셜 회원가입 및 로그인 추가
