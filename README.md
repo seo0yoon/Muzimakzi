@@ -55,6 +55,7 @@
 #### Mens detail page, Womens detail page
 
 - html, scss 추가, Mock Data 변경, Cart Modal 추가, alert 기능 추가
+  [Blog](https://seo0yoon.tistory.com/174)
 
 #### Cart page
 

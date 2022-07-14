@@ -11,7 +11,7 @@ const Detail = () => {
   const [isOpenCartModal, setIsOpenCartModal] = useState(false);
   const [clickColor, setClickColor] = useState(0);
   const [clickCount, setClickCount] = useState(1);
-  const [clickColorChange, setClickColorChange] = useState(0);
+  // const [clickColorChange, setClickColorChange] = useState(0);
   const [detailData, setDetailDate] = useState([]);
   const [sizeCount, setSizeCount] = useState();
   const dispatch = useDispatch();
@@ -153,17 +153,17 @@ const Detail = () => {
                       checked={clickColor === color}
                       onChange={() => {
                         setClickColor(color);
-                        setClickColorChange(
-                          color === 'Purple'
-                            ? 1
-                            : color === 'Blue'
-                            ? 2
-                            : color === 'Orange'
-                            ? 3
-                            : color === 'Green'
-                            ? 4
-                            : 0
-                        );
+                        // setClickColorChange(
+                        //   color === 'Purple'
+                        //     ? 1
+                        //     : color === 'Blue'
+                        //     ? 2
+                        //     : color === 'Orange'
+                        //     ? 3
+                        //     : color === 'Green'
+                        //     ? 4
+                        //     : 0
+                        // );
                       }}
                     />
                     <label>{color}</label>
